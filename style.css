@@ -23,7 +23,7 @@ nav { padding: 1.3rem 0; }
 .intro { display: flex; flex-direction: column; justify-content: center; padding: clamp(1.35rem, 4vw, 3.5rem); }
 .kicker { margin: 0; text-transform: uppercase; letter-spacing: .12em; font-weight: 800; font-size: .78rem; }
 .cover .kicker { color: var(--navy); }
-h1 { margin: .24em 0 .25em; color: var(--navy); font: 900 clamp(2.6rem, 5.3vw, 5rem)/.99 Impact, "Arial Black", sans-serif; text-transform: uppercase; letter-spacing: -.025em; }
+h1 { margin: .24em 0 .25em; color: var(--navy); font: 400 clamp(2.6rem, 5.3vw, 5rem)/.99 "Bangers", Impact, "Arial Black", sans-serif; text-transform: uppercase; letter-spacing: .035em; }
 h1 span { display: block; }
 .tagline { max-width: 34ch; font-size: clamp(1rem, 2vw, 1.18rem); margin: 0 0 1.5rem; }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; }
