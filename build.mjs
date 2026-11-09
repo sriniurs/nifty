@@ -41,7 +41,7 @@ const sections = [...months].map(([month, posts]) =>
 
 mkdirSync(output, { recursive: true });
 cpSync(source, output + '/' + source, { recursive: true });
-for (const asset of ['style.css', 'captain-cover.jpg']) cpSync(asset, output + '/' + asset);
+for (const asset of ['style.css', 'captain-nifty-mumbai.jpg']) cpSync(asset, output + '/' + asset);
 const latest = issues[0];
 writeFileSync(output + '/index.html', [
   '<!doctype html><html lang="en"><head><meta charset="utf-8">',
@@ -55,7 +55,7 @@ writeFileSync(output + '/index.html', [
   '<div class="actions">',
   latest ? '<a class="button primary" href="' + latest.url + '">Read the latest comic <span aria-hidden="true">↗</span></a>' : '',
   '<a class="button secondary" href="#archive">Browse the archive <span aria-hidden="true">↓</span></a></div></div>',
-  '<figure class="cover-art"><img src="./captain-cover.jpg" alt="Captain Nifty in a red cape stands above a cliff marked 25,000 as two onlookers watch." fetchpriority="high"></figure></header>',
+  '<figure class="cover-art"><img src="./captain-nifty-mumbai.jpg" width="850" height="850" alt="Captain Nifty leaps over the Mumbai waterfront in a red cape, holding a market newspaper." fetchpriority="high"></figure></header>',
   '<section id="archive" class="archives" aria-labelledby="archive-title"><div class="archive-intro"><p class="kicker">The back issues</p><h2 id="archive-title">Issue archive</h2><p>Browse by upload month, newest first.</p></div>',
   sections || '<p>The first issue will appear here after upload.</p>',
   '</section><footer><a href="https://sriniurs.github.io/">srini.presents</a><span>The Nifty Chronicles</span></footer>',
