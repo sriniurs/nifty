@@ -41,16 +41,23 @@ const sections = [...months].map(([month, posts]) =>
 
 mkdirSync(output, { recursive: true });
 cpSync(source, output + '/' + source, { recursive: true });
-for (const asset of ['style.css', 'captain-nifty.svg']) cpSync(asset, output + '/' + asset);
+for (const asset of ['style.css', 'captain-cover.jpg']) cpSync(asset, output + '/' + asset);
+const latest = issues[0];
 writeFileSync(output + '/index.html', [
   '<!doctype html><html lang="en"><head><meta charset="utf-8">',
   '<meta name="viewport" content="width=device-width,initial-scale=1">',
-  '<title>The Nifty Chronicles</title><link rel="stylesheet" href="./style.css"></head>',
-  '<body><main><nav><a href="https://sriniurs.github.io/">← srini.presents</a></nav>',
-  '<header class="nifty-chronicles"><p class="label">MARKET COMICS</p>',
-  '<h1>The Nifty Chronicles</h1><p>Follow the Nifty and the trading day, one comic at a time.</p>',
-  '<div class="cast"><span><img src="./captain-nifty.svg" alt="" width="52" height="52">Captain Nifty</span></div></header>',
-  '<div class="archives"><p class="label">UPLOAD ARCHIVE · NEWEST FIRST</p>',
+  '<meta name="description" content="Follow Captain Nifty through illustrated stories about the Indian stock market.">',
+  '<title>The Nifty Chronicles | srini.presents</title><link rel="stylesheet" href="./style.css"></head>',
+  '<body><main class="page"><nav aria-label="Site navigation"><a class="brand" href="https://sriniurs.github.io/">← srini.presents</a><a class="nav-link" href="#archive">Issue archive ↓</a></nav>',
+  '<header class="cover"><div class="intro"><p class="kicker">An illustrated market series</p>',
+  '<h1><span>The Nifty</span><span>Chronicles</span></h1>',
+  '<p class="tagline">Follow Captain Nifty through market rallies, plot twists and the trading day.</p>',
+  '<div class="actions">',
+  latest ? '<a class="button primary" href="' + latest.url + '">Read the latest comic <span aria-hidden="true">↗</span></a>' : '',
+  '<a class="button secondary" href="#archive">Browse the archive <span aria-hidden="true">↓</span></a></div></div>',
+  '<figure class="cover-art"><img src="./captain-cover.jpg" alt="Captain Nifty in a red cape stands above a cliff marked 25,000 as two onlookers watch." fetchpriority="high"></figure></header>',
+  '<section id="archive" class="archives" aria-labelledby="archive-title"><div class="archive-intro"><p class="kicker">The back issues</p><h2 id="archive-title">Issue archive</h2><p>Browse by upload month, newest first.</p></div>',
   sections || '<p>The first issue will appear here after upload.</p>',
-  '</div></main></body></html>',
+  '</section><footer><a href="https://sriniurs.github.io/">srini.presents</a><span>The Nifty Chronicles</span></footer>',
+  '</main></body></html>',
 ].join('\n'));
