@@ -47,7 +47,7 @@ writeFileSync(output + '/index.html', [
   '<!doctype html><html lang="en"><head><meta charset="utf-8">',
   '<meta name="viewport" content="width=device-width,initial-scale=1">',
   '<meta name="description" content="Follow Captain Nifty through illustrated stories about the Indian stock market.">',
-  '<title>The Nifty Chronicles | srini.presents</title><link rel="stylesheet" href="./style.css?v=comic-cover-2"></head>',
+  '<title>The Nifty Chronicles | srini.presents</title><link rel="stylesheet" href="./style.css?v=yellow-banner"></head>',
   '<body><main class="page"><nav aria-label="Site navigation"><a class="brand" href="https://sriniurs.github.io/">← srini.presents</a><a class="nav-link" href="#archive">Issue archive ↓</a></nav>',
   '<header class="cover"><div class="intro"><p class="kicker">An illustrated market series</p>',
   '<h1><span>The Nifty</span> <span>Chronicles</span></h1>',
