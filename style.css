@@ -1,0 +1,37 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, sans-serif;
+  color: #191920;
+  background: #f7f3eb;
+  line-height: 1.55;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { width: min(100% - 2rem, 64rem); margin: 0 auto; padding: 2rem 0 4rem; }
+header { border: 2px solid #191920; border-radius: 1.25rem; padding: clamp(1.25rem, 5vw, 3.25rem); }
+.masthead { background: #fffdf7; }
+.label { font-size: .75rem; font-weight: 800; letter-spacing: .13em; }
+h1, h2 { line-height: 1.08; margin: .35em 0; }
+h1 { font-size: clamp(2.2rem, 7vw, 5rem); letter-spacing: -.05em; }
+h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); letter-spacing: -.03em; }
+p { margin: 0 0 1rem; }
+a { color: inherit; }
+a:focus-visible { outline: 3px solid #643ecc; outline-offset: 5px; }
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+.card { display: flex; flex-direction: column; border: 2px solid; border-radius: .85rem; padding: 1.4rem; text-decoration: none; box-shadow: 3px 4px 0 #191920; }
+.card:hover .cta { text-decoration: underline; }
+.cta { margin-top: auto; font-weight: 750; }
+.cast { display: flex; flex-wrap: wrap; gap: .65rem 1rem; margin: 0 0 1rem; }
+.cast span { display: flex; align-items: center; gap: .35rem; font-size: .85rem; font-weight: 750; }
+.cast img { display: block; padding: .2rem; background: #fffdf7; border: 1px solid; border-radius: 50%; }
+.nifty-chronicles { background: #dbf4e9; }
+.india-unpacked { background: #ffe3a1; }
+nav { margin-bottom: 1.25rem; font-weight: 700; }
+.archives { margin-top: 2rem; }
+.month { margin-top: 1.5rem; }
+.month ul { list-style: none; padding: 0; border-top: 1px solid #aba69d; }
+.month li { border-bottom: 1px solid #aba69d; }
+.month a { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem 1rem; padding: 1rem .25rem; text-decoration: none; font-weight: 700; }
+.month a:hover span:first-child { text-decoration: underline; }
+.month small { font-weight: 500; color: #514b44; }
+@media (max-width: 38rem) { .cards { grid-template-columns: 1fr; } }

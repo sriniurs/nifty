@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><style>.floor{grid-template-columns:112px 1fr}.floor .lvl{font-size:22px}.floor>*{min-width:0}@media(max-width:420px){.floor{grid-template-columns:92px 1fr;gap:8px;padding:10px 8px}.floor .lvl{font-size:20px}.bar{grid-template-columns:100px 1fr 52px;gap:5px}.grid{grid-template-columns:minmax(0,1fr)}.checks{grid-template-columns:minmax(0,1fr)}.panel{padding:15px}.cast{grid-template-columns:72px 1fr}.cast svg{width:72px;height:72px}}@media print{body{background:white}.book{padding:0}.panel,.cover,.page-title,.day,.door{box-shadow:none}.page{break-inside:auto}}</style></head><body>
+<title>The Nifty Chronicles | Friday 6 Nov → Muhurat 8 Nov 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&amp;family=Comic+Neue:wght@400;700&amp;display=swap">
+<style>
+/* Layout: a comic book read top to bottom: cover, then "pages" of bordered panels on a halftone ground.
+   Single visual world (printed comic), so one theme with every color set explicitly. */
+:root{
+  --paper:#ffffff;
+  --ground:#2a6fdb;      /* page ground behind panels: printed-blue */
+  --ink:#141414;
+  --red:#e8382b;
+  --yellow:#ffd83a;
+  --green:#19a058;
+  --cyan:#3cc3ee;
+  --pink:#ff86b0;
+  --muted:#4a4a4a;
+  --display:"Bangers",Impact,"Arial Black",sans-serif;
+  --body:"Comic Neue","Comic Sans MS","Trebuchet MS",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.45;
+  background-image:radial-gradient(rgba(255,255,255,.18) 1.6px,transparent 1.7px);
+  background-size:12px 12px;
+}
+.book{max-width:1060px;margin:0 auto;padding-block:24px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:grid;gap:28px}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.04em;margin:0;text-wrap:balance;line-height:1}
+a{color:var(--ink)}
+a:focus-visible,input:focus-visible+span{outline:3px dashed var(--red);outline-offset:3px}
+
+/* panels */
+.page{display:grid;gap:14px}
+.page-title{display:inline-block;justify-self:start;background:var(--yellow);border:4px solid var(--ink);padding:6px 16px 2px;
+  font-family:var(--display);font-size:clamp(26px,4.5vw,38px);box-shadow:6px 6px 0 var(--ink);transform:rotate(-1.2deg)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.panel{position:relative;background:var(--paper);border:4px solid var(--ink);padding:18px;min-width:0;box-shadow:6px 6px 0 var(--ink)}
+.panel.dots{background-image:radial-gradient(rgba(20,20,20,.09) 1.4px,transparent 1.5px);background-size:9px 9px}
+.panel h3{font-size:26px;margin-bottom:8px}
+.caption{display:inline-block;background:var(--yellow);border:3px solid var(--ink);padding:4px 10px;font-weight:700;font-size:14px;
+  text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.wide{grid-column:1/-1}
+
+/* speech bubbles */
+.bubble{position:relative;background:var(--paper);border:3px solid var(--ink);border-radius:22px;padding:12px 16px;font-weight:700;margin:6px 0 18px}
+.bubble::after{content:"";position:absolute;left:34px;bottom:-16px;border:14px solid transparent;border-top-color:var(--ink);border-bottom:0}
+.bubble::before{content:"";position:absolute;left:37px;bottom:-10px;border:11px solid transparent;border-top-color:var(--paper);border-bottom:0;z-index:1}
+.bubble.right::after{left:auto;right:34px}.bubble.right::before{left:auto;right:37px}
+.shout{font-family:var(--display);font-size:clamp(30px,6vw,52px);color:var(--yellow);-webkit-text-stroke:2px var(--ink);
+  text-shadow:4px 4px 0 var(--ink);transform:rotate(-6deg);display:inline-block;letter-spacing:.05em}
+
+/* truth stamps */
+.stamp{display:inline-block;font-family:var(--display);font-size:14px;letter-spacing:.08em;border:2px solid var(--ink);padding:1px 7px 0;
+  margin-left:6px;vertical-align:middle;transform:rotate(-3deg)}
+.fact{background:var(--cyan)}.est{background:var(--yellow)}.opi{background:var(--pink)}
+
+/* cover */
+.cover{position:relative;background:var(--red);border:5px solid var(--ink);box-shadow:8px 8px 0 var(--ink);overflow:hidden;
+  padding:22px clamp(16px,4vw,36px) 26px;display:grid;gap:16px;grid-template-columns:1fr auto;align-items:center;color:var(--ink)}
+.cover::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 75% 55%,rgba(255,216,58,.35) 0 8deg,transparent 8deg 18deg);pointer-events:none}
+.cover > *{position:relative}
+.issue{display:flex;gap:10px;flex-wrap:wrap;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+.issue span{background:var(--paper);border:3px solid var(--ink);padding:3px 9px}
+.cover h1{font-size:clamp(46px,9vw,96px);color:var(--yellow);-webkit-text-stroke:3px var(--ink);text-shadow:6px 6px 0 var(--ink);margin-top:6px}
+.cover .sub{font-family:var(--display);font-size:clamp(22px,3.6vw,32px);color:var(--paper);-webkit-text-stroke:1px var(--ink);text-shadow:3px 3px 0 var(--ink)}
+.cover .blurb{background:var(--paper);border:3px solid var(--ink);padding:10px 14px;max-width:560px;font-weight:700}
+.hero-big{width:min(240px,32vw)}
+@media (max-width:640px){.cover{grid-template-columns:1fr}.hero-big{justify-self:center;width:180px}}
+
+/* stat tiles in the "previously" page */
+.big{font-family:var(--display);font-size:clamp(40px,7vw,60px);line-height:.9}
+.up{color:var(--green)}.down{color:var(--red)}
+.chart-wrap{overflow-x:auto}
+.chart-wrap svg{width:100%;min-width:480px;height:auto;display:block}
+svg text{font-family:var(--body);font-weight:700;fill:var(--ink)}
+
+/* cast */
+.cast{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:start}
+.cast svg{width:96px;height:96px}
+.cast .name{font-family:var(--display);font-size:24px;letter-spacing:.04em}
+.cast .tag{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+
+/* sector bars */
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:110px 1fr 52px;gap:8px;align-items:center;font-weight:700;font-variant-numeric:tabular-nums}
+.bar .track{height:20px;border:3px solid var(--ink);background:var(--paper)}
+.bar .fill{height:100%;background:var(--green);border-right:3px solid var(--ink)}
+.bar .fill.alt{background:var(--cyan)}
+
+/* the tower of levels */
+.tower{display:grid;gap:0;border:4px solid var(--ink);font-variant-numeric:tabular-nums}
+.floor{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;padding:10px 12px;border-top:3px solid var(--ink)}
+.floor:first-child{border-top:0}
+.floor .lvl{font-family:var(--display);font-size:24px}
+.floor.r{background:#ffd9d4}.floor.s{background:#d4f2e0}
+.floor.now{background:var(--yellow);font-weight:700}
+.floor small{display:block;color:var(--muted);font-weight:400}
+
+/* week strip */
+.week{display:grid;gap:12px;grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:880px){.week{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}}
+.day{background:var(--paper);border:4px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:12px;min-width:0;display:grid;gap:8px;align-content:start}
+.day .d{font-family:var(--display);font-size:28px;background:var(--ink);color:var(--yellow);margin:-12px -12px 0;padding:6px 12px 2px}
+.day.boss .d{background:var(--red);color:var(--paper)}
+.day ul{margin:0;padding-left:18px}
+.day li{margin-bottom:4px}
+.day .g{font-size:14px;color:var(--muted);border-top:2px dashed var(--ink);padding-top:6px}
+
+/* endings */
+.doors{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.door{border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:16px;display:grid;gap:8px;align-content:start;background:var(--paper)}
+.door h3{font-size:30px}
+.door .odds{font-family:var(--display);font-size:44px;line-height:1}
+.door.bull{background:#d4f2e0}.door.base{background:#fff4c2}.door.bear{background:#ffd9d4}
+.door dl{margin:0;display:grid;gap:6px}
+.door dt{font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.06em}
+.door dd{margin:0}
+
+/* checklist */
+.checks{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.check{display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-weight:700}
+.check input{position:absolute;opacity:0;width:1px;height:1px}
+.check span.box{flex:0 0 26px;height:26px;border:3px solid var(--ink);background:var(--paper);display:grid;place-items:center;font-family:var(--display);font-size:22px;line-height:1}
+.check input:checked+span.box{background:var(--green);color:var(--paper)}
+.check input:checked+span.box::after{content:"✓"}
+.check input:focus-visible+span.box{outline:3px dashed var(--red);outline-offset:3px}
+
+/* fine print */
+.fine{background:var(--paper);border:4px solid var(--ink);padding:18px;font-size:15px;display:grid;gap:12px}
+.fine h3{font-size:26px}
+.fine ol,.fine ul{margin:0;padding-left:20px}
+.fine li{margin-bottom:4px}
+.disclaimer{background:var(--ink);color:var(--paper);border:4px solid var(--ink);padding:16px;font-weight:700}
+.disclaimer b{color:var(--yellow)}
+.legend{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-weight:700}
+@media (prefers-reduced-motion:no-preference){
+  .shout{animation:pop .6s ease-out both}
+  @keyframes pop{0%{transform:rotate(-6deg) scale(.6)}70%{transform:rotate(-6deg) scale(1.08)}100%{transform:rotate(-6deg) scale(1)}}
+}
+</style>
+
+<div class="book">
+
+<!-- ===== COVER ===== -->
+<header class="cover">
+  <div style="display:grid;gap:12px">
+    <div class="issue"><span>Friday 6 Nov → Muhurat 8 Nov 2026</span><span>Market data: Fri 6 Nov close</span><span style="background:var(--yellow)">srini.presents · for curious grown-ups</span></div>
+    <h1>The Nifty Chronicles</h1>
+    <div class="sub">Captain Nifty &amp; the Muhurat Reality Check</div>
+    <p class="blurb">Can Captain Nifty turn Friday’s fireworks into a firm Muhurat landing? A 2.01% leap cleared 25,000, but smaller-company indices slipped and volatility jumped. The cape looks strong. The supporting cast needs a closer look.</p>
+  </div>
+  <svg class="hero-big" viewBox="0 0 200 240" role="img" aria-label="Captain Nifty, a green candlestick superhero with a red cape">
+    <polygon points="62,70 138,70 176,226 24,226" fill="#e8382b" stroke="#141414" stroke-width="6"></polygon>
+    <line x1="100" y1="6" x2="100" y2="60" stroke="#141414" stroke-width="8"></line>
+    <line x1="100" y1="190" x2="100" y2="236" stroke="#141414" stroke-width="8"></line>
+    <rect x="56" y="56" width="88" height="140" rx="8" fill="#19a058" stroke="#141414" stroke-width="6"></rect>
+    <rect x="62" y="84" width="76" height="22" rx="10" fill="#141414"></rect>
+    <circle cx="82" cy="95" r="6" fill="#ffffff"></circle><circle cx="118" cy="95" r="6" fill="#ffffff"></circle>
+    <path d="M78 130 Q100 150 122 130" fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round"></path>
+    <text x="100" y="180" text-anchor="middle" font-size="30" style="font-family:Bangers,Impact,sans-serif;fill:#ffd83a;stroke:#141414;stroke-width:1.5px">N50</text>
+  </svg>
+</header>
+
+<!-- legend -->
+<section class="panel" aria-label="How to read this comic">
+  <div class="caption">How to read this comic</div>
+  <div class="legend">Every claim wears a badge:
+    <span class="stamp fact">FACT</span> confirmed from a cited source
+    <span class="stamp est">ESTIMATE</span> calculated or inferred
+    <span class="stamp opi">OPINION</span> the analyst's judgement
+  </div>
+</section>
+
+<div class="panel" style="font-size:14px;padding:12px 16px"><b>Friday recap + Muhurat playbook.</b> Prepared on Sunday 8 November after the special session ended, using Friday’s data and Friday-evening macro context only. Sunday’s prices and outcome are excluded; the outlook is a clearly labelled reconstruction, not a live call.</div>
+
+<!-- ===== PAGE 1: PREVIOUSLY ===== -->
+<section class="page" aria-labelledby="p1"><h2 class="page-title" id="p1">Previously, on Friday…</h2><div class="grid"><div class="panel dots"><h3>Friday’s close <span class="stamp fact">FACT</span></h3><div class="big">25,030</div><p>25,030.35 exact. Up <b>493.75 points (+2.01%)</b> from Thursday. The session finished at its high. <a href="#src1">[1]</a></p></div><div class="panel dots"><h3>Friday’s trading range <span class="stamp fact">FACT</span></h3><div class="big up">642 pts</div><p>Low <b>24,388.05</b>; high <b>25,030.35</b>; open <b>24,538.20</b>. Range: 642.30 points. This is the day’s span, not a next-session target. <a href="#src1">[1]</a></p></div><div class="panel dots"><h3>Below the 52-week high <span class="stamp est">ESTIMATE</span></h3><div class="big down">−5.09%</div><p>Reference high: <b>26,373.20</b> on 5 January. Calculated as 1 − Friday’s close ÷ that high. <a href="#src4">[4]</a></p></div><div class="panel wide"><div class="caption">Last 10 actual sessions · context, not ten intraday points <span class="stamp fact">FACT</span></div><div class="chart-wrap"><svg viewBox="0 0 560 278" role="img" aria-label="Ten Nifty daily closes, 26 October to 6 November 2026: 22753.20, 22749.75, 22698.85, 22936.75, 23053.10, 23440.80, 23810.85, 23960.60, 24536.60, 25030.35. Axis begins at 22500."><line x1="56" x2="550" y1="37.04" y2="37.04" stroke="#e8382b" stroke-dasharray="5 3"></line><text x="545" y="29" text-anchor="end" font-size="11">NEXT SESSION R1 ~25,244</text><line x1="56" x2="550" y1="220" y2="220" stroke="#ddd"></line><text x="50" y="224" text-anchor="end" font-size="11">22,500</text><line x1="56" x2="550" y1="186.66666666666666" y2="186.66666666666666" stroke="#ddd"></line><text x="50" y="190.66666666666666" text-anchor="end" font-size="11">23,000</text><line x1="56" x2="550" y1="153.33333333333331" y2="153.33333333333331" stroke="#ddd"></line><text x="50" y="157.33333333333331" text-anchor="end" font-size="11">23,500</text><line x1="56" x2="550" y1="120" y2="120" stroke="#ddd"></line><text x="50" y="124" text-anchor="end" font-size="11">24,000</text><line x1="56" x2="550" y1="86.66666666666666" y2="86.66666666666666" stroke="#ddd"></line><text x="50" y="90.66666666666666" text-anchor="end" font-size="11">24,500</text><line x1="56" x2="550" y1="53.33333333333334" y2="53.33333333333334" stroke="#ddd"></line><text x="50" y="57.33333333333334" text-anchor="end" font-size="11">25,000</text><rect x="65" y="203.11999999999995" width="30" height="16.880000000000052" fill="#19a058" stroke="#141414" stroke-width="3"></rect><text x="80" y="238" text-anchor="middle" font-size="11">26 Oct</text><rect x="113" y="203.35" width="30" height="16.650000000000006" fill="#e8382b" stroke="#141414" stroke-width="3"></rect><text x="128" y="238" text-anchor="middle" font-size="11">27</text><rect x="161" y="206.74333333333342" width="30" height="13.256666666666575" fill="#e8382b" stroke="#141414" stroke-width="3"></rect><text x="176" y="238" text-anchor="middle" font-size="11">28</text><rect x="209" y="190.88333333333333" width="30" height="29.116666666666674" fill="#19a058" stroke="#141414" stroke-width="3"></rect><text x="224" y="238" text-anchor="middle" font-size="11">29</text><rect x="257" y="183.12666666666678" width="30" height="36.87333333333322" fill="#19a058" stroke="#141414" stroke-width="3"></rect><text x="272" y="238" text-anchor="middle" font-size="11">30</text><rect x="305" y="157.28000000000006" width="30" height="62.71999999999994" fill="#19a058" stroke="#141414" stroke-width="3"></rect><text x="320" y="238" text-anchor="middle" font-size="11">2 Nov</text><rect x="353" y="132.6100000000001" width="30" height="87.3899999999999" fill="#19a058" stroke="#141414" stroke-width="3"></rect><text x="368" y="238" text-anchor="middle" font-size="11">3</text><rect x="401" y="122.62666666666676" width="30" height="97.37333333333324" fill="#19a058" stroke="#141414" stroke-width="3"></rect><text x="416" y="238" text-anchor="middle" font-size="11">4</text><rect x="449" y="84.22666666666677" width="30" height="135.77333333333323" fill="#19a058" stroke="#141414" stroke-width="3"></rect><text x="464" y="238" text-anchor="middle" font-size="11">5</text><rect x="497" y="51.31000000000009" width="30" height="168.6899999999999" fill="#19a058" stroke="#141414" stroke-width="3"></rect><text x="512" y="238" text-anchor="middle" font-size="11">6 Nov</text><line x1="56" x2="550" y1="220" y2="220" stroke="#141414" stroke-width="3"></line><text x="512" y="44.31000000000009" text-anchor="middle" font-size="12">25,030</text><text x="56" y="260" font-size="10">Axis starts at 22,500. Green = higher daily close; red = lower. R1 is calculated, not guaranteed.</text><text x="56" y="275" font-size="10">Source: NSE daily index files, 26 Oct–6 Nov; prior baseline 23 Oct. [1]</text></svg></div><p style="font-size:14px">Ten daily closes end on Friday. The regular week gained 8.58%; this edition’s main story is Friday’s <b>2.01%</b>. <a href="#src1">[1]</a></p></div><div class="panel"><h3>Friday’s guest list <span class="stamp fact">FACT</span></h3><div class="bars" aria-label="Friday daily index percentage changes"><div class="bar"><span>Bank Nifty</span><span class="track"><span class="fill" style="display:block;width:90.80%;background:var(--green)"></span></span><span>+2.27%</span></div><div class="bar"><span>NIFTY 50</span><span class="track"><span class="fill" style="display:block;width:80.40%;background:var(--green)"></span></span><span>+2.01%</span></div><div class="bar"><span>Midcap 100</span><span class="track"><span class="fill" style="display:block;width:1.00%;background:var(--red)"></span></span><span>-0.02%</span></div><div class="bar"><span>Smallcap 100</span><span class="track"><span class="fill" style="display:block;width:32.80%;background:var(--red)"></span></span><span>-0.82%</span></div></div><p>Daily changes share the same Friday window. Bar lengths show absolute size on a 2.5% scale; signs and colour show direction. <a href="#src1">[1]</a></p></div><div class="panel"><h3>The volatility meter <span class="stamp fact">FACT</span></h3><div class="big">17.47</div><svg viewBox="0 0 240 140" style="width:100%;max-width:300px;display:block;margin:0 auto" role="img" aria-label="India VIX at about 17.47, higher than last Friday’s 15.30"><path d="M20 120 A100 100 0 0 1 61 39" fill="none" stroke="#19a058" stroke-width="22"></path><path d="M61 39 A100 100 0 0 1 179 39" fill="none" stroke="#ffd83a" stroke-width="22"></path><path d="M179 39 A100 100 0 0 1 220 120" fill="none" stroke="#e8382b" stroke-width="22"></path><line x1="120" y1="120" x2="89" y2="37" stroke="#141414" stroke-width="7" stroke-linecap="round"></line><circle cx="120" cy="120" r="10" fill="#141414"></circle><text x="20" y="138" font-size="11">10</text><text x="120" y="24" font-size="11" text-anchor="middle">20</text><text x="220" y="138" font-size="11" text-anchor="end">30</text></svg><p>India VIX rose <b>12.1% on Friday</b> from 15.58, even as Nifty rallied. It measures annualised implied volatility, not direction. <a href="#src1">[1]</a></p><p style="font-size:14px">Illustrative gauge; not the Market Mood Index.</p></div></div></section>
+
+<!-- ===== PAGE 2: CAST ===== -->
+<section class="page" aria-labelledby="p2">
+  <h2 class="page-title" id="p2">Meet the cast</h2>
+  <div class="grid">
+    <div class="panel cast">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="32,30 68,30 86,96 14,96" fill="#e8382b" stroke="#141414" stroke-width="4"></polygon><line x1="50" y1="4" x2="50" y2="26" stroke="#141414" stroke-width="5"></line><rect x="30" y="24" width="40" height="62" rx="5" fill="#19a058" stroke="#141414" stroke-width="4"></rect><rect x="33" y="38" width="34" height="11" rx="5" fill="#141414"></rect><circle cx="42" cy="43" r="3" fill="#fff"></circle><circle cx="58" cy="43" r="3" fill="#fff"></circle></svg>
+      <div><div class="tag">The hero</div><div class="name">Captain Nifty</div>
+        <p style="margin:4px 0 0">The NIFTY 50: 50 large Indian companies, weighted by tradable market value. Friday close <b>25,030.35</b>, up <b>2.01%</b>. <a href="#src1">[1]</a></p></div>
+    </div>
+    <div class="panel cast">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><g stroke="#141414" stroke-width="3" fill="#e8382b"><rect x="6" y="14" width="42" height="20"></rect><rect x="52" y="14" width="42" height="20"></rect><rect x="6" y="38" width="20" height="20"></rect><rect x="30" y="38" width="42" height="20"></rect><rect x="76" y="38" width="18" height="20"></rect><rect x="6" y="62" width="42" height="20"></rect><rect x="52" y="62" width="42" height="20"></rect></g><path d="M30 52 l10 -6 M60 46 l10 6" stroke="#141414" stroke-width="4"></path></svg>
+      <div><div class="tag">The new obstacle</div><div class="name">The Wall of Resistance</div>
+        <p style="margin:4px 0 0">First test: Friday’s <b>25,030</b> high. Next-session classic R1 sits near <b>25,244</b>. These are reference points, not a solid ceiling. <span class="stamp est">ESTIMATE</span></p></div>
+    </div>
+    <div class="panel cast">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><ellipse cx="50" cy="62" rx="30" ry="10" fill="#5a3a22" stroke="#141414" stroke-width="4"></ellipse><rect x="20" y="22" width="60" height="40" fill="#7a4e2c" stroke="#141414" stroke-width="4"></rect><ellipse cx="50" cy="22" rx="30" ry="10" fill="#9a6a40" stroke="#141414" stroke-width="4"></ellipse><path d="M20 70 q-14 10 -6 24 M38 72 q-4 14 4 24 M62 72 q4 14 -4 24 M80 70 q14 10 6 24" fill="none" stroke="#141414" stroke-width="5" stroke-linecap="round"></path><path d="M34 38 l10 4 M66 38 l-10 4" stroke="#ffd83a" stroke-width="4"></path><text x="50" y="58" font-size="12" text-anchor="middle" style="fill:#ffd83a;font-family:Bangers,Impact,sans-serif">$98</text></svg>
+      <div><div class="tag">Villain #1, shrinking</div><div class="name">The Crude Kraken</div>
+        <p style="margin:4px 0 0">Reported Friday Brent settlement: <b>$98.32 a barrel</b>. The week’s oil fall eased pressure, but Friday itself saw a small rebound. <a href="#src6">[6]</a> <span class="stamp fact">FACT</span></p></div>
+    </div>
+    <div class="panel cast">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="34,6 66,6 66,52 86,52 50,94 14,52 34,52" fill="#e8382b" stroke="#141414" stroke-width="4"></polygon><path d="M38 28 l10 5 M62 28 l-10 5" stroke="#141414" stroke-width="4"></path><path d="M40 46 q10 -6 20 0" fill="none" stroke="#141414" stroke-width="4"></path></svg>
+      <div><div class="tag">Villain #2</div><div class="name">Wall Street Wipeout</div>
+        <p style="margin:4px 0 0">Friday reporting described overseas technology-stock selling. India’s strength does not guarantee insulation from global risk. <a href="#src5">[5]</a> <span class="stamp opi">OPINION</span></p></div>
+    </div>
+    <div class="panel cast">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M6 70 L94 70" stroke="#141414" stroke-width="5"></path><path d="M10 70 Q50 92 90 70" fill="#19a058" stroke="#141414" stroke-width="4"></path><g stroke="#141414" stroke-width="4"><line x1="14" y1="70" x2="10" y2="96"></line><line x1="86" y1="70" x2="90" y2="96"></line><line x1="50" y1="80" x2="50" y2="96"></line></g><circle cx="50" cy="34" r="12" fill="#ffd83a" stroke="#141414" stroke-width="4"></circle><path d="M50 50 v8" stroke="#141414" stroke-width="4"></path></svg>
+      <div><div class="tag">The sidekick</div><div class="name">The Safety Net</div>
+        <p style="margin:4px 0 0">Friday-derived pivot near <b>24,816</b>, S1 near <b>24,602</b>, and Friday’s low near <b>24,388</b>. The trampoline is a metaphor, not a guarantee. <span class="stamp est">ESTIMATE</span></p></div>
+    </div>
+    <div class="panel cast">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><rect x="14" y="10" width="72" height="80" rx="8" fill="#3cc3ee" stroke="#141414" stroke-width="4"></rect><rect x="24" y="22" width="52" height="30" fill="#ffffff" stroke="#141414" stroke-width="3"></rect><polyline points="28,46 38,36 46,42 56,28 72,34" fill="none" stroke="#19a058" stroke-width="4"></polyline><g fill="#141414"><rect x="26" y="62" width="14" height="8"></rect><rect x="44" y="62" width="14" height="8"></rect><rect x="62" y="62" width="14" height="8"></rect><rect x="26" y="74" width="14" height="8"></rect><rect x="44" y="74" width="14" height="8"></rect><rect x="62" y="74" width="14" height="8"></rect></g></svg>
+      <div><div class="tag">The wise guide</div><div class="name">Professor Earnings</div>
+        <p style="margin:4px 0 0">For this special-session edition, the report card is <b>participation and price behaviour</b>. No fresh company-results event is invented for Sunday. <span class="stamp opi">OPINION</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGE 3: POWER-UPS ===== -->
+<section class="page" aria-labelledby="p3"><h2 class="page-title" id="p3">Captain Nifty’s power readings</h2><div class="grid"><div class="panel"><h3>The Captain checks his cape</h3><div class="bubble">Professor, a two-percent Friday! Am I unstoppable?</div><div class="bubble right" style="background:var(--yellow)">Stronger, yes. But check the heat gauge—and who came with you.</div><p style="font-size:14px">Daily indicator snapshot dated 6 Nov, 3:31 pm IST. Provider calculations; not independently recomputed. <span class="stamp est">ESTIMATE</span></p></div><div class="panel dots"><h3>Trend lines (simple averages)</h3><ul><li><b>20-day ~23,117</b>: price about 8.3% above.</li><li><b>50-day ~23,248</b>: price above this medium-term line.</li><li><b>200-day ~23,995</b>: price about 4.3% above.</li></ul><p>The short averages remain below the 200-day SMA. Price recovery is stronger than that longer trend ordering. <a href="#src2">[2]</a></p></div><div class="panel dots"><h3>Energy and momentum</h3><ul><li><b>RSI (14) ~78.5</b>: above 70; stretched momentum, not an automatic reversal.</li><li><b>MACD (12,26,9) +328; signal +66.6</b>: above zero and above signal. <a href="#src2">[2]</a></li><li><b>Bollinger (20,2) ~21,746–24,487</b>: Friday’s close exceeded the upper band. <a href="#src4">[4]</a></li></ul><p>A hot reading describes extension. It does not put a timer on the rally.</p></div><div class="panel"><h3>Expected swing size</h3><p><b>ATR (14) ~343 points</b> is a recent true-range measure, including gaps. It is neither a target nor a forecast for a shortened session. <a href="#src2">[2]</a></p><p><b>India VIX 17.47</b> says movement risk remained elevated. No special one-hour price range is inferred. <a href="#src1">[1]</a></p><span class="shout">Verdict!</span><p><b>Strong headline. Hot momentum. Uneven participation.</b> <span class="stamp opi">OPINION</span></p></div></div></section>
+
+<!-- ===== PAGE 4: THE TOWER ===== -->
+<section class="page" aria-labelledby="p4"><h2 class="page-title" id="p4">The tower of levels</h2><div class="grid"><div class="panel" style="padding:0;border:0;box-shadow:none;background:transparent"><div class="tower" aria-label="Friday-based price references, ordered high to low"><div class="floor r"><span class="lvl">25,459</span><span><b>Classic R2</b><small>Friday-derived second resistance: 25,458.55.</small></span></div><div class="floor r"><span class="lvl">25,244</span><span><b>Classic R1</b><small>Friday-derived first resistance: 25,244.45.</small></span></div><div class="floor now"><span class="lvl">25,030</span><span><b>Captain Nifty is here</b><small>Friday high and close: 25,030.35.</small></span></div><div class="floor s"><span class="lvl">24,816</span><span><b>The balance point</b><small>Friday-derived pivot: 24,816.25.</small></span></div><div class="floor s"><span class="lvl">24,602</span><span><b>Safety net #1</b><small>Friday-derived classic S1: 24,602.15.</small></span></div><div class="floor s"><span class="lvl">24,388</span><span><b>Friday’s low</b><small>Observed session low; not a promise of support.</small></span></div><div class="floor s"><span class="lvl">24,174</span><span><b>Classic S2</b><small>Friday-derived second support: 24,173.95.</small></span></div><div class="floor s"><span class="lvl">23,995</span><span><b>Longer-trend context</b><small>Provider’s 200-day SIMPLE average; not a Muhurat target.</small></span></div></div></div><div class="panel dots"><h3>How were these floors chosen? <span class="stamp est">ESTIMATE</span></h3><p>Next-session classic pivots use Friday’s official high, low and close. The low is an observed reference; the SMA is longer-term context. <a href="#src1">[1]</a> <a href="#src2">[2]</a></p><ul><li><b>P = (H + L + C) ÷ 3</b></li><li><b>R1 = 2P − L; S1 = 2P − H</b></li><li><b>R2 = P + (H − L); S2 = P − (H − L)</b></li></ul><div class="bubble">A map can show the floors. It cannot stop a trapdoor.</div><p>Friday’s pivots apply to the <b>next session: Muhurat</b>. Recalculate after that session for Monday. No options open-interest wall is claimed.</p></div></div></section><section class="page" id="deep-dive" aria-labelledby="deep-title"><h2 class="page-title" id="deep-title">Deep Dive: Behind Friday’s fireworks</h2><div class="grid"><div class="panel dots"><h3>The Kraken’s currency bill</h3><div class="caption">01 · Crude oil &amp; rupee <span class="stamp fact">FACT</span></div><div class="big up">$98.32</div><p>Reported Friday Brent settlement. The week fell about 17%, despite a small Friday rebound. The rupee ended near <b>₹93.905 per dollar</b>, roughly 1.1% stronger over the week. These are macro context, not Friday-only percentage moves. <a href="#src6">[6]</a></p><p>Dollar oil price × rupees per dollar shapes the rupee import cost. Relief need not produce instant petrol-price cuts.</p><div class="bubble">The Kraken shrank. It did not retire.</div></div><div class="panel dots"><h3>Foreign guests stayed Friday</h3><div class="caption">02 · Daily FII / DII flows <span class="stamp fact">FACT</span></div><div class="big up">₹13,750 cr</div><p>Foreign institutional investors (FIIs) were Friday net cash buyers of <b>₹13,749.82 crore</b>. Domestic institutional investors (DIIs) sold <b>₹5,968.70 crore net</b>. These reported exchange cash-market figures are provisional. <a href="#src7">[7]</a></p><p>Net means purchases minus sales for each group. Every completed trade still has a buyer and seller; the groups need not cancel.</p><div class="bubble">A guest list is not a guarantee of tomorrow’s attendance.</div></div><div class="panel dots"><h3>The index isn’t the crowd</h3><div class="caption">03 · Breadth / heavyweight influence <span class="stamp fact">FACT</span></div><div class="big">+2.01 / −0.82</div><p>Friday: Nifty 50 <b>+2.01%</b>, Smallcap 100 <b>−0.82%</b>, Midcap 100 <b>−0.02%</b>. All compare the same daily window. <a href="#src1">[1]</a></p><p>Free-float market-value weighting gives large companies more influence. Stronger participation would make follow-through more convincing. <span class="stamp opi">OPINION</span></p><div class="bubble">The hero climbed. Some supporting actors took the stairs down.</div></div></div></section>
+
+<!-- ===== PAGE 5: THE WEEK ===== -->
+<section class="page" aria-labelledby="p5"><h2 class="page-title" id="p5">Muhurat, step by step</h2><div class="panel" style="padding:12px 16px"><b>Special-session calendar <span class="stamp fact">FACT</span>:</b> Sunday 8 November 2026. Official NSE equity timings below; they are the announced schedule, not a claim about the outcome. <a href="#src9">[9]</a></div><div class="week"><article class="day"><div class="d">2:05 pm</div><b>Pre-open begins</b><ul><li>Sunday 8 November · IST</li><li>Order entry has staged rules and random closure</li><li>Matching / confirmation: 2:15–2:17</li></ul><div class="g">Buffer runs 2:17–2:20 pm.</div></article><article class="day"><div class="d">2:20 pm</div><b>Continuous trading</b><ul><li>Equity continuous trading opens</li><li>Compare price with Friday’s 25,030 close</li><li>Watch whether smaller shares participate</li></ul><div class="g">A short session can still reverse.</div></article><article class="day"><div class="d">3:15 pm</div><b>CAS transition</b><ul><li>Continuous trading ends for CAS securities</li><li>Transition: 3:15–3:20</li><li>CAS order entry: 3:20–3:30</li></ul><div class="g">CAS = Closing Auction Session.</div></article><article class="day"><div class="d">3:30–3:35</div><b>Different closing paths</b><ul><li>Non-CAS continuous trading ends 3:30</li><li>CAS matching / confirmation: 3:30–3:35</li><li>Broker cutoffs may differ</li></ul><div class="g">Check which category applies to the security.</div></article><article class="day"><div class="d">Afterward</div><b>Reset the map</b><ul><li>All executed trades create settlement obligations</li><li>Recalculate pivots from the completed Muhurat session</li><li>Use the new reference for the next session</li></ul><div class="g">Do not carry Friday’s pivots forward unchanged.</div></article></div></section>
+
+<!-- ===== PAGE 6: THREE ENDINGS ===== -->
+<section class="page" aria-labelledby="p6"><h2 class="page-title" id="p6">Choose your ending</h2><div class="panel" style="padding:12px 16px">These are <b>Friday-close-based conditional scenarios for Muhurat</b> <span class="stamp opi">OPINION</span>. No numerical odds are assigned. Sunday’s outcome is not used to select or rewrite an ending.</div><div class="doors"><article class="door bull"><h3>Ending A: The next floor!</h3><div class="odds">Follow-through</div><dl><dt>What has to happen</dt><dd>25,000 holds; banks stay firm and participation broadens.</dd><dt>What the index does</dt><dd>Sustains above Friday’s <b>25,030</b> high. Watch <b>25,244</b>, then 25,459 as references, not targets.</dd><dt>Plot twist that cancels it</dt><dd>The move fails and price remains below <b>24,816</b>.</dd></dl></article><article class="door base"><h3>Ending B: Catch your breath</h3><div class="odds">Standoff</div><dl><dt>What has to happen</dt><dd>Buyers stay interested, but stop chasing Friday’s jump.</dd><dt>What the index does</dt><dd>Consolidates around <b>24,816–25,030</b>. A pause alone is neither a bullish nor bearish verdict.</dd><dt>Plot twist that cancels it</dt><dd>Sustained trading above 25,030 or below 24,816 breaks this narrow range idea.</dd></dl></article><article class="door bear"><h3>Ending C: The trapdoor</h3><div class="odds">Reversal</div><dl><dt>What has to happen</dt><dd>Friday’s breakout fails; heavyweight support fades or risk aversion returns.</dd><dt>What the index does</dt><dd>Loses <b>24,816</b>. Then 24,602 and Friday’s 24,388 low become lower references; a gap can bypass them.</dd><dt>Plot twist that cancels it</dt><dd>A quick recovery above 24,816, followed by 25,000 with improving participation.</dd></dl></article></div></section>
+
+<!-- ===== PAGE 7: CHECKLIST ===== -->
+
+
+<!-- ===== BACK PAGE ===== -->
+<section class="page" aria-labelledby="p8"><h2 class="page-title" id="p8">The fine print</h2><div class="fine"><h3>What this edition does—and does not—claim</h3><ol><li><b>Friday is the price cutoff.</b> This single-day recap looks from 6 Nov toward Muhurat on 8 Nov. Prepared after the session, without incorporating Sunday’s prices or outcome.</li><li>Friday-evening oil settlement and post-close institutional flow reporting are separate from the cash-market closing timestamp.</li><li>Indicators are the dated provider snapshots, not a fresh independent calculation. No Sunday readings are silently mixed in.</li><li>Daily comparisons are labelled daily; ten-session history and weekly macro context are explicitly marked.</li><li>Rounded next-session pivots are mechanical references, not guaranteed support/resistance. Refresh them after Muhurat.</li><li>No verified GIFT Nifty, Market Mood Index, fresh options dataset, scenario odds or intraday tape is invented.</li><li>The short-session interpretations are editorial. Session length alone does not establish trend strength.</li></ol><h3>Sources · checked 8 November 2026</h3><ul><li id="src1"><a href="https://nsearchives.nseindia.com/content/indices/ind_close_all_06112026.csv">1. NSE daily index closing files</a> — Friday OHLC, daily index changes and India VIX. Ten-session chart checked against individual NSE files for 26 Oct–6 Nov; 23 Oct baseline checked too.</li><li id="src2"><a href="https://trendlyne.com/equity/technical-analysis/NIFTY/1887/nifty-50/">2. Trendlyne · daily technical snapshot</a> — Technical block timestamp: 6 Nov, 3:31 pm IST. SMA, RSI, MACD and ATR are provider calculations. Its live header has since updated; Sunday values are excluded.</li><li id="src4"><a href="https://www.alphatribe.in/daily-pulse/nifty-today">4. AlphaTribe · 6 Nov daily pulse</a> — Dated 6 Nov, 10:45 pm IST. Bollinger settings/readings and Friday 52-week high reference. Narrative claims about a gap-up are not used: the official open was almost unchanged.</li><li id="src5"><a href="https://hdfcsky.com/news/market-close-report-today-november-6-2026-diwali-party-continues-in-full-swing-ignoring-global-selloff">5. HDFC SKY · Friday closing report</a> — Dated 6 Nov. Supporting reporting for foreign buying, oil relief and overseas technology selling. Causation is not independently quantified.</li><li id="src6"><a href="https://regalticker.com/indian-stock-market-weekly-review-2-6-november-2026">6. RegalTicker · completed-week review</a> — Reported Friday Brent settlement and rupee close, with explicitly weekly comparisons. Friday-evening context, not a 3:30 pm commodity quote.</li><li id="src7"><a href="https://upstox.com/fii-dii-data/">7. Upstox · FII/DII daily table</a> — 6 Nov row: reported exchange cash-market activity, provisional; daily figures, not the five-session totals.</li><li id="src9"><a href="https://nsearchives.nseindia.com/content/circulars/CMTR76941.pdf">9. NSE circular CMTR/76941</a> — Official equity Muhurat schedule dated 19 Oct 2026, including CAS and non-CAS timing and settlement obligations.</li></ul></div><div class="disclaimer"><b>The end… for now.</b> Light a diya. Keep the risk meter on. This comic is for information and education only. It is not personal financial advice, a recommendation to buy or sell, or a trading signal.<div style="margin-top:10px;font-family:var(--display);font-size:22px;letter-spacing:.05em;color:var(--yellow)">srini.presents · for curious grown-ups</div></div></section>
+
+</div>
+
+
+
+
+<style>.grid>*{min-width:0}.big{overflow-wrap:anywhere}.fine a{overflow-wrap:anywhere}.floor{grid-template-columns:112px 1fr}.floor>*{min-width:0}@media(max-width:420px){.book{padding-left:12px;padding-right:12px}.grid{grid-template-columns:minmax(0,1fr)}.panel{padding:15px}.cast{grid-template-columns:64px 1fr}.cast svg{width:64px;height:64px}.floor{grid-template-columns:88px 1fr;gap:8px;padding:10px 8px}.floor .lvl{font-size:20px}.bar{grid-template-columns:98px 1fr 52px;gap:5px}.big{font-size:44px}.issue{font-size:12px}.week{grid-template-columns:minmax(0,1fr)}.doors{grid-template-columns:minmax(0,1fr)}}</style></body></html>
