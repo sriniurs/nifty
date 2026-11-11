@@ -258,6 +258,23 @@ No levels and no call; the Sunday edition looks ahead.
 
 If a push is refused, the Claude GitHub App needs access to `sriniurs/nifty` (GitHub → Settings → Applications → Claude → Repository access). In that case, send the HTML file instead.
 
+### 8A. Share kit (for manual posting on X and LinkedIn)
+
+Every edition, after it is published, also produces a share kit and sends it to Srini. He posts it himself for now.
+
+1. **Image:** run `python3 templates/make-share-card.py issues/<file>.html share/<file-stem>.png "<label>|<value>" "<label>|<value>"`. It makes a **1200×675 PNG** with the edition tag, title, sub-headline, two key numbers (whole numbers) and the cover art.
+   - Post Market: Nifty close + the day's change in points.
+   - Pre Open: GIFT Nifty with its quote time + one overnight number.
+   - Holiday Special: the last close + one global number.
+   - Week That Was: weekly close + weekly change.
+   - Week Ahead: the "boss" event + the call's key level.
+2. **Text:** save it as `share/<file-stem>.txt`, with two versions:
+   - **X:** at most 260 characters including the link. Hook line, the story in 1–2 short lines, one emoji at most, link, 2 hashtags (#Nifty #StockMarketIndia).
+   - **LinkedIn:** 4–6 short paragraphs in a professional but plain tone: the hook, what happened or what's coming, why it matters, the link, one question to invite comments, 4–5 hashtags, and a one-line "For information and education only. Not investment advice."
+   - The **link** is the issue's live URL.
+   - **Same rules as the comic:** no decimals, whole numbers, verified facts only, no buy or sell language.
+3. **Store and send:** commit both files to `share/` (not published by the site build), then attach the PNG and paste both texts in the report to Srini.
+
 ---
 
 ## 9. Quality checks before publishing
@@ -294,7 +311,7 @@ If a push is refused, the Claude GitHub App needs access to `sriniurs/nifty` (Gi
 
 ## 11. What changed
 
-**v3.1 (11 Nov 2026):** added the reading chain (§1A): every edition links back to the previous edition and forward to the next. the 4 pm slot now runs every day. It publishes the Holiday Special on weekday NSE holidays, The Week That Was on Saturdays and The Week Ahead on Sundays. Each has its own look, filename and title (§6A–6C).
+**v3.1 (11 Nov 2026):** added the share kit (§8A): every edition comes with a 1200×675 image and ready-to-post X and LinkedIn text. Also added the reading chain (§1A): every edition links back to the previous edition and forward to the next. the 4 pm slot now runs every day. It publishes the Holiday Special on weekday NSE holidays, The Week That Was on Saturdays and The Week Ahead on Sundays. Each has its own look, filename and title (§6A–6C).
 
 **v3.0, from v2.2:**
 
