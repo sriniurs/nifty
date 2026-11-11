@@ -1,14 +1,27 @@
-# Nifty Chronicles — Master Reference v3.0
+# Nifty Chronicles — Master Reference v3.1
 
 Two daily editions, written so they never repeat each other.
 
-Version 3.0 · 11 November 2026 · replaces the Daily Nifty Chronicles Master Reference v2.2
+Version 3.1 · 11 November 2026 · replaces v3.0 and the Daily Nifty Chronicles Master Reference v2.2
 Brand: **srini.presents** · Tagline: **for curious grown-ups** · Handle: `@srini.presents`
 Live archive: **https://srinipresents.com/nifty/** (GitHub repo `sriniurs/nifty`, formerly `nifty-comics`)
 
 ---
 
-## 1. The two editions at a glance
+## 1. The editions at a glance
+
+**What runs when (all times IST):**
+
+| Day | 3:00 am | 4:00 pm |
+|---|---|---|
+| NSE trading weekday | **Pre Open** | **Post Market** |
+| Weekday NSE holiday | nothing | **Holiday Special** (§6A) |
+| Saturday | nothing | **The Week That Was** (§6B) |
+| Sunday | nothing | **The Week Ahead** (§6C) |
+
+If NSE holds a special Saturday or Sunday session (for example on Budget day), the 4 pm slot still publishes the weekend edition and folds that session into it.
+
+### The two daily editions
 
 | | **Post Market** | **Pre Open** |
 |---|---|---|
@@ -113,6 +126,66 @@ Pivots: `P = (H+L+C)/3 · R1 = 2P−L · S1 = 2P−H · R2 = P+(H−L) · S2 = P
 
 ---
 
+## 6A. Holiday Special (weekday NSE holiday, 4 pm)
+
+**Job:** the market is shut, but the world isn't. Give readers something genuinely interesting to read with their festival chai.
+
+- **Look:** the Storm Watch storyboard format (`examples/Storm-Watch-holiday-special-2026-11-10.html`), on a **festive purple ground (`#3b1f6b`)** with a red **HOLIDAY SPECIAL** tag. The purple keeps it distinct from Pre Open's navy.
+- **Filename:** `issues/YYYY-MM-DD-holiday-special.html`. **`<title>`:** `Nifty Chronicles Holiday Special | <Weekday D Mon YYYY>`.
+- **Captain's colours:** follow the last completed session.
+
+**Sections:**
+1. **Cover:** a festive scene tied to the actual holiday, a hook question, the date, the data cutoff and the brand.
+2. **Why the market is closed:** the festival or occasion in 3–4 friendly sentences, verified from the NSE holiday notice. Keep it respectful and neutral.
+3. **Where we left the Captain:** one row with the last close and its range.
+4. **Meanwhile, out there:** a time-stamped storyboard (3–5 chapters) of what moved while India rested: Asia, Europe, US futures or the US session, oil, gold, the dollar, GIFT Nifty if it is trading, and big global news.
+5. **The holiday file:** one fun, verified fact, such as how the Nifty did on the session after this holiday in past years (only from a dated, cited dataset), a market tradition linked to the festival, or a number story. If nothing can be verified, choose a different angle; never invent history.
+6. **Word of the day:** one market term, following the same no-repeat rule as Post Market.
+7. **When the bell rings again:** the next session's date and its known events. No levels and no call; Pre Open does that.
+8. **Fine print and disclaimer.**
+
+## 6B. The Week That Was (Saturday, 4 pm)
+
+**Job:** the week as a story: who won, who lost, what changed, and how our calls did.
+
+- **Look:** a **weekend newspaper** feel, with a cream halftone page (`#f4ecd8`), the yellow cover kept, a green **WEEK THAT WAS** tag, and panels styled as newspaper clippings (same borders and shadows).
+- **Filename:** `issues/YYYY-MM-DD-week-that-was.html`. **`<title>`:** `Nifty Chronicles The Week That Was | <Weekday D Mon YYYY>`.
+- **Captain's colours:** the week's last close against the previous week's last close.
+
+**Sections:**
+1. **Cover:** a scene for the whole week (a marathon, a roller coaster, a mountain climb, a cricket series…), a hook, the date range covered, and the brand.
+2. **The weekly scoreboard:** Nifty and Sensex weekly change in points and as an approximate %, Bank Nifty, Midcap 100, Smallcap 100, India VIX now against a week ago.
+3. **The week in five frames:** one mini panel per trading day, each with an up or down arrow, the day's close and one line of why. Mark holidays as "Holiday".
+4. **Chart:** the week's daily closes as bars, plus the previous week's close as a baseline (exactly the trading days of the week; if there were fewer than five, say so).
+5. **Heroes and laggards of the week:** the best and worst sectors and Nifty stocks over the week, each with the reason.
+6. **The money trail of the week:** total FII and DII flows for the week, the rupee's weekly move, and oil and gold over the week.
+7. **The world this week:** US, Asia and Europe in one panel: the 2–3 events that mattered to India.
+8. **Report card:** each Pre Open call this week marked ✅ held or ❌ wrong, with one honest line on what we missed.
+9. **Number of the week** and **word of the week**.
+10. **Fine print and disclaimer.**
+
+No levels and no call; the Sunday edition looks ahead.
+
+## 6C. The Week Ahead (Sunday, 4 pm)
+
+**Job:** a calm, clear plan for the coming week, so a reader knows what to watch each day.
+
+- **Look:** a **dawn teal page (`#0f6b73`)** with a sunrise halftone, the yellow cover kept, and a purple **WEEK AHEAD** tag. Day cards use the `.week` grid from the 9 Nov example, styled as a planner.
+- **Filename:** `issues/YYYY-MM-DD-week-ahead.html`. **`<title>`:** `Nifty Chronicles The Week Ahead | <Weekday D Mon YYYY>`.
+- **Captain's colours:** the last weekly close against the previous week's close.
+
+**Sections:**
+1. **Cover:** a forward-looking scene (a map, a road trip, a mountain path, a train timetable…), a hook question, the week's dates, and the brand.
+2. **Last week in one line:** the weekly close and change, plus a link to Saturday's issue.
+3. **The week's planner:** one card per trading day, Monday to Friday. Each card lists the verified scheduled events: Indian data, major results, RBI, F&O expiry, IPOs, US and global data, Fed and central banks, and holidays. Mark the **boss day** (the biggest event) in red.
+4. **Three big questions for the week**, in plain words.
+5. **The weekly map:** classic weekly pivots from last week's high, low and close (same formula, applied to the weekly H/L/C), plus last week's observed high and low. Whole numbers, with plain names.
+6. **The cast this week:** which character is the main threat or helper this week and why, in 2–3 lines each, for at most three characters.
+7. **Our call for the week (OPINION):** one most-probable path for the week, why, what pushes against it, and **"We are wrong if"** with whole-number levels. Pre Open's daily calls refine it day by day.
+8. **Fine print and disclaimer.**
+
+---
+
 ## 7. Research and verification
 
 **Never invent a figure.** Every number needs a value, units, a timestamp and a source URL. If an important reading isn't published by the cutoff, write "not yet available at cutoff". Don't estimate it.
@@ -144,7 +217,11 @@ Pivots: `P = (H+L+C)/3 · R1 = 2P−L · S1 = 2P−H · R2 = P+(H−L) · S2 = P
 - Today's Indian calendar.
 - Convert every time to IST, allowing for US daylight saving: the US cash close is 2:30 am IST in winter and 1:30 am IST in summer.
 
-**Trading day check:** both editions read the NSE holiday list first. If NSE equities don't trade that day, publish nothing. A holiday special in the Storm Watch format (`examples/Storm-Watch-holiday-special-2026-11-10.html`) is made only on request.
+**Day check:** every run reads the NSE holiday list and the weekday first, then picks its edition from the table in §1. Pre Open publishes nothing on non-trading days.
+
+**Weekend research:**
+- The Week That Was needs every daily OHLC for the week, the previous week's close, weekly sector and stock moves, weekly FII/DII totals, the rupee, oil and gold over the week, and all of the week's Pre Open calls (read them from `issues/`).
+- The Week Ahead needs verified calendars from official sources (exchange circulars, RBI, MoSPI, BLS, company board-meeting filings), last week's high, low and close for the weekly pivots, and the holiday list.
 
 **Sources:** prefer, in order: NSE/BSE and NSE Indices files, exchange notices, RBI/FBIL, official data agencies (MoSPI, BLS), central banks, then credible dated financial reporting. Cross-check key closes.
 
@@ -180,7 +257,7 @@ If a push is refused, the Claude GitHub App needs access to `sriniurs/nifty` (Gi
 
 | File | Use |
 |---|---|
-| `01-nifty-comic/Nifty-Chronicles-Master-Reference-v3.0.md` | This rulebook |
+| `01-nifty-comic/Nifty-Chronicles-Master-Reference.md` | This rulebook (v3.1) |
 | `01-nifty-comic/examples/Nifty-Chronicles-Post-Market-SAMPLE-2026-11-11.html` | **Approved Post Market template.** Edit in place: CSS, components and section order |
 | `01-nifty-comic/examples/Nifty-Chronicles-Pre-Open-SAMPLE-2026-11-11.html` | **Approved Pre Open template** |
 | `01-nifty-comic/examples/Nifty-Chronicles-2026-11-11-v2.2.html` | The last single-edition daily in the v2.2 format (reference only) |
@@ -193,7 +270,11 @@ If a push is refused, the Claude GitHub App needs access to `sriniurs/nifty` (Gi
 
 ---
 
-## 11. What changed from v2.2
+## 11. What changed
+
+**v3.1 (11 Nov 2026):** the 4 pm slot now runs every day. It publishes the Holiday Special on weekday NSE holidays, The Week That Was on Saturdays and The Week Ahead on Sundays. Each has its own look, filename and title (§6A–6C).
+
+**v3.0, from v2.2:**
 
 - One daily edition became **two**: Post Market (India today) and Pre Open (overnight world, map and call). Content is split so nothing repeats.
 - **No decimals** in visible numbers; plain-English names for indicators.
