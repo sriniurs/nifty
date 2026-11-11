@@ -53,7 +53,7 @@ writeFileSync(output + '/index.html', [
   '<h1><span>The Nifty</span> <span>Chronicles</span></h1>',
   '<p class="tagline">Follow Captain Nifty through market rallies, plot twists and the trading day.</p>',
   '<div class="actions">',
-  latest ? '<a class="button primary" href="' + latest.url + '">Read the latest comic <span aria-hidden="true">↗</span></a>' : '',
+  latest ? '<a class="button primary" href="' + latest.url + '">Read the latest article <span aria-hidden="true">↗</span></a>' : '',
   '<a class="button secondary" href="#archive">Browse the archive <span aria-hidden="true">↓</span></a></div></div>',
   '<figure class="cover-art"><img src="./captain-nifty-marine-drive.jpg" width="1254" height="1254" alt="Captain Nifty, a green candlestick superhero with a red cape, swoops over the lights of Marine Drive in Mumbai." fetchpriority="high"></figure></header>',
   '<section id="archive" class="archives" aria-labelledby="archive-title"><div class="archive-intro"><p class="kicker">The back issues</p><h2 id="archive-title">Issue archive</h2><p>Browse by upload month, newest first.</p></div>',
