@@ -1,0 +1,218 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Nifty Chronicles The Week That Was | Saturday 7 Nov 2026 (sample)</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&amp;family=Comic+Neue:wght@400;700&amp;display=swap"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+.floor{grid-template-columns:112px 1fr}.floor .lvl{font-size:22px}.floor>*{min-width:0}@media(max-width:420px){.floor{grid-template-columns:92px 1fr;gap:8px;padding:10px 8px}.floor .lvl{font-size:20px}.bar{grid-template-columns:100px 1fr 52px;gap:5px}.grid{grid-template-columns:minmax(0,1fr)}.checks{grid-template-columns:minmax(0,1fr)}.panel{padding:15px}.cast{grid-template-columns:72px 1fr}.cast svg{width:72px;height:72px}}@media print{body{background:white}.book{padding:0}.panel,.cover,.page-title,.day,.door{box-shadow:none}.page{break-inside:auto}}
+
+/* Layout: a comic book read top to bottom: cover, then "pages" of bordered panels on a halftone ground.
+   Single visual world (printed comic), so one theme with every color set explicitly. */
+:root{
+  --paper:#ffffff;
+  --ground:#2a6fdb;      /* page ground behind panels: printed-blue */
+  --ink:#141414;
+  --red:#e8382b;
+  --yellow:#ffd83a;
+  --green:#19a058;
+  --cyan:#3cc3ee;
+  --pink:#ff86b0;
+  --muted:#4a4a4a;
+  --display:"Bangers",Impact,"Arial Black",sans-serif;
+  --body:"Comic Neue","Comic Sans MS","Trebuchet MS",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.45;
+  background-image:radial-gradient(rgba(255,255,255,.18) 1.6px,transparent 1.7px);
+  background-size:12px 12px;
+}
+.book{max-width:1060px;margin:0 auto;padding-block:24px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:grid;gap:28px}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.04em;margin:0;text-wrap:balance;line-height:1}
+a{color:var(--ink)}
+a:focus-visible,input:focus-visible+span{outline:3px dashed var(--red);outline-offset:3px}
+
+/* panels */
+.page{display:grid;gap:14px}
+.page-title{display:inline-block;justify-self:start;background:var(--yellow);border:4px solid var(--ink);padding:6px 16px 2px;
+  font-family:var(--display);font-size:clamp(26px,4.5vw,38px);box-shadow:6px 6px 0 var(--ink);transform:rotate(-1.2deg)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.panel{position:relative;background:var(--paper);border:4px solid var(--ink);padding:18px;min-width:0;box-shadow:6px 6px 0 var(--ink)}
+.panel.dots{background-image:radial-gradient(rgba(20,20,20,.09) 1.4px,transparent 1.5px);background-size:9px 9px}
+.panel h3{font-size:26px;margin-bottom:8px}
+.caption{display:inline-block;background:var(--yellow);border:3px solid var(--ink);padding:4px 10px;font-weight:700;font-size:14px;
+  text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.wide{grid-column:1/-1}
+
+/* speech bubbles */
+.bubble{position:relative;background:var(--paper);border:3px solid var(--ink);border-radius:22px;padding:12px 16px;font-weight:700;margin:6px 0 18px}
+.bubble::after{content:"";position:absolute;left:34px;bottom:-16px;border:14px solid transparent;border-top-color:var(--ink);border-bottom:0}
+.bubble::before{content:"";position:absolute;left:37px;bottom:-10px;border:11px solid transparent;border-top-color:var(--paper);border-bottom:0;z-index:1}
+.bubble.right::after{left:auto;right:34px}.bubble.right::before{left:auto;right:37px}
+.shout{font-family:var(--display);font-size:clamp(30px,6vw,52px);color:var(--yellow);-webkit-text-stroke:2px var(--ink);
+  text-shadow:4px 4px 0 var(--ink);transform:rotate(-6deg);display:inline-block;letter-spacing:.05em}
+
+/* truth stamps */
+.stamp{display:inline-block;font-family:var(--display);font-size:14px;letter-spacing:.08em;border:2px solid var(--ink);padding:1px 7px 0;
+  margin-left:6px;vertical-align:middle;transform:rotate(-3deg)}
+.fact{background:var(--cyan)}.est{background:var(--yellow)}.opi{background:var(--pink)}
+
+/* cover */
+.cover{position:relative;background:var(--red);border:5px solid var(--ink);box-shadow:8px 8px 0 var(--ink);overflow:hidden;
+  padding:22px clamp(16px,4vw,36px) 26px;display:grid;gap:16px;grid-template-columns:1fr auto;align-items:center;color:var(--ink)}
+.cover::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 75% 55%,rgba(255,216,58,.35) 0 8deg,transparent 8deg 18deg);pointer-events:none}
+.cover > *{position:relative}
+.issue{display:flex;gap:10px;flex-wrap:wrap;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+.issue span{background:var(--paper);border:3px solid var(--ink);padding:3px 9px}
+.cover h1{font-size:clamp(46px,9vw,96px);color:var(--yellow);-webkit-text-stroke:3px var(--ink);text-shadow:6px 6px 0 var(--ink);margin-top:6px}
+.cover .sub{font-family:var(--display);font-size:clamp(22px,3.6vw,32px);color:var(--paper);-webkit-text-stroke:1px var(--ink);text-shadow:3px 3px 0 var(--ink)}
+.cover .blurb{background:var(--paper);border:3px solid var(--ink);padding:10px 14px;max-width:560px;font-weight:700}
+.hero-big{width:min(240px,32vw)}
+@media (max-width:640px){.cover{grid-template-columns:1fr}.hero-big{justify-self:center;width:180px}}
+
+/* stat tiles in the "previously" page */
+.big{font-family:var(--display);font-size:clamp(40px,7vw,60px);line-height:.9}
+.up{color:var(--green)}.down{color:var(--red)}
+.chart-wrap{overflow-x:auto}
+.chart-wrap svg{width:100%;min-width:480px;height:auto;display:block}
+svg text{font-family:var(--body);font-weight:700;fill:var(--ink)}
+
+/* cast */
+.cast{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:start}
+.cast svg{width:96px;height:96px}
+.cast .name{font-family:var(--display);font-size:24px;letter-spacing:.04em}
+.cast .tag{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+
+/* sector bars */
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:110px 1fr 52px;gap:8px;align-items:center;font-weight:700;font-variant-numeric:tabular-nums}
+.bar .track{height:20px;border:3px solid var(--ink);background:var(--paper)}
+.bar .fill{height:100%;background:var(--green);border-right:3px solid var(--ink)}
+.bar .fill.alt{background:var(--cyan)}
+
+/* the tower of levels */
+.tower{display:grid;gap:0;border:4px solid var(--ink);font-variant-numeric:tabular-nums}
+.floor{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;padding:10px 12px;border-top:3px solid var(--ink)}
+.floor:first-child{border-top:0}
+.floor .lvl{font-family:var(--display);font-size:24px}
+.floor.r{background:#ffd9d4}.floor.s{background:#d4f2e0}
+.floor.now{background:var(--yellow);font-weight:700}
+.floor small{display:block;color:var(--muted);font-weight:400}
+
+/* week strip */
+.week{display:grid;gap:12px;grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:880px){.week{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}}
+.day{background:var(--paper);border:4px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:12px;min-width:0;display:grid;gap:8px;align-content:start}
+.day .d{font-family:var(--display);font-size:28px;background:var(--ink);color:var(--yellow);margin:-12px -12px 0;padding:6px 12px 2px}
+.day.boss .d{background:var(--red);color:var(--paper)}
+.day ul{margin:0;padding-left:18px}
+.day li{margin-bottom:4px}
+.day .g{font-size:14px;color:var(--muted);border-top:2px dashed var(--ink);padding-top:6px}
+
+/* endings */
+.doors{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.door{border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:16px;display:grid;gap:8px;align-content:start;background:var(--paper)}
+.door h3{font-size:30px}
+.door .odds{font-family:var(--display);font-size:44px;line-height:1}
+.door.bull{background:#d4f2e0}.door.base{background:#fff4c2}.door.bear{background:#ffd9d4}
+.door dl{margin:0;display:grid;gap:6px}
+.door dt{font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.06em}
+.door dd{margin:0}
+
+/* checklist */
+.checks{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.check{display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-weight:700}
+.check input{position:absolute;opacity:0;width:1px;height:1px}
+.check span.box{flex:0 0 26px;height:26px;border:3px solid var(--ink);background:var(--paper);display:grid;place-items:center;font-family:var(--display);font-size:22px;line-height:1}
+.check input:checked+span.box{background:var(--green);color:var(--paper)}
+.check input:checked+span.box::after{content:"✓"}
+.check input:focus-visible+span.box{outline:3px dashed var(--red);outline-offset:3px}
+
+/* fine print */
+.fine{background:var(--paper);border:4px solid var(--ink);padding:18px;font-size:15px;display:grid;gap:12px}
+.fine h3{font-size:26px}
+.fine ol,.fine ul{margin:0;padding-left:20px}
+.fine li{margin-bottom:4px}
+.disclaimer{background:var(--ink);color:var(--paper);border:4px solid var(--ink);padding:16px;font-weight:700}
+.disclaimer b{color:var(--yellow)}
+.legend{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-weight:700}
+@media (prefers-reduced-motion:no-preference){
+  .shout{animation:pop .6s ease-out both}
+  @keyframes pop{0%{transform:rotate(-6deg) scale(.6)}70%{transform:rotate(-6deg) scale(1.08)}100%{transform:rotate(-6deg) scale(1)}}
+}
+
+.grid>*{min-width:0}.big{overflow-wrap:anywhere}.fine a{overflow-wrap:anywhere}.floor{grid-template-columns:112px 1fr}.floor>*{min-width:0}@media(max-width:420px){.book{padding-left:12px;padding-right:12px}.grid{grid-template-columns:minmax(0,1fr)}.panel{padding:15px}.cast{grid-template-columns:64px 1fr}.cast svg{width:64px;height:64px}.floor{grid-template-columns:88px 1fr;gap:8px;padding:10px 8px}.floor .lvl{font-size:20px}.bar{grid-template-columns:98px 1fr 52px;gap:5px}.big{font-size:44px}.issue{font-size:12px}.week{grid-template-columns:minmax(0,1fr)}.doors{grid-template-columns:minmax(0,1fr)}}
+.cover{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:center;background:var(--yellow)}.cover::before{content:none}
+.cover h1{font-size:clamp(40px,6.2vw,77px);color:var(--ink);-webkit-text-stroke:0;text-shadow:none;text-transform:uppercase;letter-spacing:.035em}.cover .sub{color:var(--ink);-webkit-text-stroke:0;text-shadow:none}
+.cover-copy{display:grid;gap:12px}.cover .blurb{margin:0}.cover-art{margin:0;min-width:0}
+.cover-art img,.cover-art svg{display:block;width:100%;height:auto;border:4px solid var(--ink);box-shadow:5px 5px 0 var(--ink);background:var(--yellow)}
+.cast-portrait{width:100%;aspect-ratio:1;object-fit:cover;border:3px solid var(--ink)}.cast-portrait-frame{display:block;overflow:hidden;aspect-ratio:1;border:3px solid var(--ink)}.cast-portrait-frame img{display:block;aspect-ratio:1;width:100%;border:0;transform:scale(1.65);transform-origin:50% 42%}
+.cast p{margin:4px 0 0}.note{font-size:14px}.week{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.floor{grid-template-columns:minmax(98px,auto) 1fr}.floor .lvl{font-size:22px}.door dt{margin-top:5px}
+.chart-wrap svg{min-width:550px;max-width:850px;margin:auto}.bar{grid-template-columns:105px 1fr 52px}.fine{overflow-wrap:anywhere}
+@media(max-width:680px){.cover{grid-template-columns:minmax(0,1fr)}.cover-copy{display:contents}.cover h1{order:1;font-size:clamp(38px,10vw,61px)}.cover .sub{order:2}.cover-art{order:3}.cover .blurb{order:4}.cover-copy>.issue:last-child{order:5}}
+@media(max-width:420px){.floor{grid-template-columns:90px 1fr;gap:8px;padding:10px 8px}.floor .lvl{font-size:19px}.bar{grid-template-columns:99px 1fr 52px;gap:5px}}
+ .closing{display:grid;gap:14px}.notice{background:#141414;color:#fff;border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:12px 16px;font-weight:700}.notice b{color:var(--yellow)}.day.storm .d{background:#2b3a8f;color:var(--yellow)}.chain{display:grid;gap:8px;margin:8px 0}.chain span{display:block;border:3px solid var(--ink);padding:6px 10px;font-weight:700;background:#eaf6ff}.chain span:nth-child(odd){background:#fff4c2}.chain i{display:block;text-align:center;font-style:normal;font-family:var(--display);font-size:22px;line-height:1}@media(min-width:720px){.grid.two{grid-template-columns:1fr 1fr}}
+/* ===== HOLIDAY SPECIAL: night storyboard ===== */
+body.night{--ground:#101a4a;background-color:#101a4a;background-image:radial-gradient(rgba(255,255,255,.10) 1.4px,transparent 1.5px)}
+.issue span.special-tag,.special-tag{display:inline-block;background:var(--red);color:#fff;border:3px solid var(--ink);padding:3px 10px;font-family:var(--display);letter-spacing:.08em;font-size:18px;transform:rotate(-2deg)}
+.story{display:grid;gap:22px;position:relative}
+.chapter{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:start}
+.clock{position:sticky;top:10px;background:var(--yellow);border:4px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:8px 10px;text-align:center;transform:rotate(-2deg)}
+.clock .t{font-family:var(--display);font-size:30px;line-height:1}
+.clock .d{font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+.frame{background:var(--paper);border:4px solid var(--ink);box-shadow:7px 7px 0 #000;padding:18px;display:grid;gap:12px;min-width:0}
+.frame h2{font-size:clamp(28px,4.4vw,42px)}
+.frame.splash{background:#ffd83a;background-image:repeating-conic-gradient(from 0deg at 50% 50%,rgba(232,56,43,.18) 0 7deg,transparent 7deg 16deg)}
+.frame.dark{background:#1d2a6b;color:#fff}.frame.dark a{color:#fff}
+.talk{display:grid;gap:10px}
+.say{position:relative;border:3px solid var(--ink);border-radius:20px;padding:10px 14px;font-weight:700;background:#fff;color:var(--ink);max-width:560px}
+.say b.who{display:block;font-family:var(--display);font-weight:400;letter-spacing:.06em;font-size:15px;color:var(--red)}
+.say.r{justify-self:end;background:#fff4c2}
+.facts{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.fact-tile{border:3px solid var(--ink);background:#fff;color:var(--ink);padding:8px 10px}
+.fact-tile .n{font-family:var(--display);font-size:32px;line-height:1}
+.fact-tile .l{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.boom{font-family:var(--display);font-size:clamp(56px,13vw,120px);line-height:.9;color:var(--red);-webkit-text-stroke:3px var(--ink);text-shadow:6px 6px 0 var(--ink);transform:rotate(-4deg);display:inline-block}
+.planks{display:grid;gap:0;border:4px solid var(--ink);font-variant-numeric:tabular-nums}
+.planks div{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:8px 12px;border-top:3px solid var(--ink);align-items:center}
+.planks div:first-child{border-top:0}.planks .v{font-family:var(--display);font-size:24px}
+.planks .r{background:#ffd9d4}.planks .s{background:#d4f2e0}.planks .c{background:var(--yellow);font-weight:700}
+@media(max-width:640px){.chapter{grid-template-columns:minmax(0,1fr)}.clock{position:static;justify-self:start}.planks div{grid-template-columns:96px 1fr}}
+
+.special-tag{color:#fff!important}.special-tag.hol{background:#e8382b!important}.special-tag.wtw{background:#19a058!important}.special-tag.wa{background:#7b3fb8!important}
+.strip{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}.strip.five{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.strip .frame{align-content:start}.strip p{margin:0}
+.frame .tag{justify-self:start;background:#141414;color:#ffd83a;font-family:var(--display);letter-spacing:.06em;padding:2px 10px;font-size:18px}
+.word{background:#fff4c2}.word .w{font-family:var(--display);font-size:clamp(36px,7vw,60px);line-height:1;color:var(--red);-webkit-text-stroke:2px var(--ink);text-shadow:4px 4px 0 var(--ink);transform:rotate(-3deg);display:inline-block;margin-bottom:6px}
+.hw li{margin-bottom:8px}.notice .stamp{color:#141414}.chapter h3{font-size:clamp(24px,4vw,34px)}
+.rc{width:100%;border-collapse:collapse}.rc th,.rc td{border:3px solid var(--ink);padding:6px 10px;text-align:left}.rc th{background:var(--yellow);font-family:var(--display);font-weight:400;letter-spacing:.05em}
+body.hol{background-color:#3b1f6b;background-image:radial-gradient(rgba(255,216,58,.16) 1.4px,transparent 1.5px)}
+body.wtw{background-color:#f4ecd8;background-image:radial-gradient(rgba(20,20,20,.12) 1.4px,transparent 1.5px)}
+body.wtw .note a{color:#141414}
+body.wa{background-color:#0f6b73;background-image:radial-gradient(rgba(255,255,255,.16) 1.4px,transparent 1.5px)}
+</style></head><body class="wtw"><main class="book"><header class="cover"><div class="cover-copy"><div class="issue"><span style="background:var(--yellow)">srini.presents · for curious grown-ups</span><span class="special-tag wtw">The Week That Was</span></div><h1>Nifty Chronicles</h1><div class="sub">Five steps up. Not one down.</div><p class="blurb">The Captain climbed every single day this week, adding almost <b>2,000 points</b>. Oil crashed, foreign money poured in, and Diwali came early on Dalal Street.</p><div class="issue"><span>Week of 2–6 November 2026</span><span>Saturday 7 Nov</span></div></div><figure class="cover-art"><svg viewBox="0 0 520 520" role="img" aria-label="Comic poster: Captain Nifty, a green candlestick with a red cape, bounds up a five-step green staircase labelled MON to FRI toward a flag at the top. A newspaper headline banner reads WEEKEND EDITION.">
+<rect width="520" height="520" fill="#f4ecd8"/><g fill="#141414" opacity=".08"><circle cx="20" cy="20" r="2"/><circle cx="40" cy="20" r="2"/><circle cx="30" cy="34" r="2"/></g>
+<rect x="20" y="20" width="480" height="56" fill="#141414"/><text x="260" y="60" text-anchor="middle" textLength="420" lengthAdjust="spacingAndGlyphs" style="font-family:Bangers,Impact,sans-serif;font-size:34px;fill:#f4ecd8">WEEKEND EDITION · DALAL STREET</text>
+<g stroke="#141414" stroke-width="4" fill="#19a058">
+<rect x="40" y="410" width="90" height="70"/><rect x="130" y="360" width="90" height="120"/><rect x="220" y="320" width="90" height="160"/><rect x="310" y="250" width="90" height="230"/><rect x="400" y="190" width="90" height="290"/></g>
+<g style="font-family:Bangers,Impact,sans-serif;font-size:24px;fill:#ffd83a" text-anchor="middle"><text x="85" y="452">MON</text><text x="175" y="402">TUE</text><text x="265" y="362">WED</text><text x="355" y="292">THU</text><text x="445" y="232">FRI</text></g>
+<line x1="470" y1="190" x2="470" y2="100" stroke="#141414" stroke-width="5"/><path d="M470 100 l-50 14 l50 14z" fill="#e8382b" stroke="#141414" stroke-width="3"/>
+<g transform="translate(355,190) rotate(12)"><path d="M-22 -30 C -60 -40 -80 -10 -100 -26 C -80 10 -50 14 -20 6 Z" fill="#e8382b" stroke="#141414" stroke-width="4"/><line x1="0" y1="-66" x2="0" y2="-46" stroke="#141414" stroke-width="7"/><line x1="0" y1="40" x2="0" y2="58" stroke="#141414" stroke-width="7"/><rect x="-24" y="-48" width="48" height="90" rx="5" fill="#19a058" stroke="#141414" stroke-width="5"/><rect x="-22" y="-36" width="44" height="12" rx="6" fill="#141414"/><circle cx="-9" cy="-30" r="3.5" fill="#fff"/><circle cx="9" cy="-30" r="3.5" fill="#fff"/><path d="M-10 -12 Q0 2 10 -12 Z" fill="#fff" stroke="#141414" stroke-width="3"/><path d="M-14 6 L14 6 L14 18 L0 32 L-14 18 Z" fill="#ffd83a" stroke="#141414" stroke-width="3"/><path d="M24 -10 q20 -14 26 -36" fill="none" stroke="#141414" stroke-width="7" stroke-linecap="round"/></g>
+<text x="60" y="140" style="font-family:Bangers,Impact,sans-serif;font-size:38px;fill:#e8382b;stroke:#141414;stroke-width:1.5px" transform="rotate(-8 60 140)">5 FOR 5!</text>
+<text x="40" y="505" style="font-family:'Comic Neue','Comic Sans MS',sans-serif;font-weight:700;font-size:14px;fill:#141414">srini.presents</text>
+</svg></figure></header>
+<section class="notice"><b>SAMPLE.</b> Rebuilt for the week of 2–6 Nov 2026 to show the Saturday format. Badges: <span class="stamp fact">FACT</span> <span class="stamp est">ESTIMATE</span> <span class="stamp opi">OPINION</span></section>
+<section class="page"><h2 class="page-title">The weekly scoreboard</h2><div class="panel dots"><div class="facts"><div class="fact-tile"><div class="n" style="color:var(--green)">25,030</div><div class="l">Nifty · up 1,977 pts (≈ 9%)</div></div><div class="fact-tile"><div class="n" style="color:var(--green)">59,086</div><div class="l">Bank Nifty · up about 4,400</div></div><div class="fact-tile"><div class="n" style="color:var(--green)">≈ 6%</div><div class="l">Midcap 100 · week</div></div><div class="fact-tile"><div class="n">15 → 17</div><div class="l">Fear gauge (India VIX)</div></div></div><p class="note" style="margin-bottom:0">Friday’s closes against the previous Friday (30 Oct). <span class="stamp fact">FACT</span> <a href="#w1">[1]</a> <a href="#w2">[2]</a></p></div></section>
+<section class="page"><h2 class="page-title">The week in five frames</h2><div class="strip five">
+<div class="frame"><div class="tag">Mon ▲ 388</div><p><b>23,441.</b> Reliance rocketed about 12% and dragged the whole index up with it.</p></div>
+<div class="frame"><div class="tag">Tue ▲ 370</div><p><b>23,811.</b> Oil kept falling and foreign funds bought again.</p></div>
+<div class="frame"><div class="tag">Wed ▲ 150</div><p><b>23,961.</b> Brent crashed below $95. Small caps jumped about 2%; IT lagged.</p></div>
+<div class="frame splash"><div class="tag">Thu ▲ 576</div><p><b>24,537.</b> The biggest day: foreigners bought a net ₹14,975 crore.</p></div>
+<div class="frame"><div class="tag">Fri ▲ 494</div><p><b>25,030.</b> Closed on the high, back above 25,000, but more stocks fell than rose.</p></div>
+</div><p class="note" style="color:#141414">Daily changes are in Nifty points. <span class="stamp fact">FACT</span> <a href="#w1">[1]</a> <a href="#w3">[3]</a></p></section>
+<section class="page"><h2 class="page-title">The climb, day by day</h2><div class="panel"><div class="chart-wrap" tabindex="0"><svg viewBox="0 0 615 220" role="img" aria-label="Nifty closes: Mon 23,441; Tue 23,811; Wed 23,961; Thu 24,537; Fri 25,030"><g font-size="13"><line x1="65" x2="605" y1="190" y2="190" stroke="#bbb"/><text x="59" y="194" text-anchor="end">23,000</text><line x1="65" x2="605" y1="152.5" y2="152.5" stroke="#bbb"/><text x="59" y="156" text-anchor="end">23,500</text><line x1="65" x2="605" y1="115" y2="115" stroke="#bbb"/><text x="59" y="119" text-anchor="end">24,000</text><line x1="65" x2="605" y1="77.5" y2="77.5" stroke="#bbb"/><text x="59" y="81" text-anchor="end">24,500</text><line x1="65" x2="605" y1="40" y2="40" stroke="#bbb"/><text x="59" y="44" text-anchor="end">25,000</text><rect x="89" y="156.94" width="62" height="33.06" fill="#19a058" stroke="#141414" stroke-width="3"/><text x="120" y="150" text-anchor="middle">23,441</text><text x="120" y="211" text-anchor="middle">Mon</text><rect x="197" y="129.19" width="62" height="60.81" fill="#19a058" stroke="#141414" stroke-width="3"/><text x="228" y="122" text-anchor="middle">23,811</text><text x="228" y="211" text-anchor="middle">Tue</text><rect x="305" y="117.96" width="62" height="72.04" fill="#19a058" stroke="#141414" stroke-width="3"/><text x="336" y="111" text-anchor="middle">23,961</text><text x="336" y="211" text-anchor="middle">Wed</text><rect x="413" y="74.76" width="62" height="115.24" fill="#19a058" stroke="#141414" stroke-width="3"/><text x="444" y="68" text-anchor="middle">24,537</text><text x="444" y="211" text-anchor="middle">Thu</text><rect x="521" y="37.72" width="62" height="152.28" fill="#19a058" stroke="#141414" stroke-width="3"/><text x="552" y="31" text-anchor="middle">25,030</text><text x="552" y="211" text-anchor="middle">Fri</text><line x1="65" x2="605" y1="190" y2="190" stroke="#141414" stroke-width="3"/></g></svg></div><p class="note">The axis starts at 23,000. Last week’s close (30 Oct) was 23,053. All five bars are green: every day closed higher than the day before.</p></div></section>
+<section class="page"><h2 class="page-title">Heroes and laggards of the week</h2><div class="grid"><div class="panel" style="background:#d4f2e0"><h3>Carried the Captain <span class="stamp fact">FACT</span></h3><ul><li><b>Reliance</b>: about 12% in a single day on Monday.</li><li><b>Banks</b>: Bank Nifty up about 8% on the week.</li><li><b>Mahindra &amp; Mahindra</b>: up 5% on Friday alone.</li></ul></div><div class="panel" style="background:#ffd9d4"><h3>Missed the bus <span class="stamp fact">FACT</span></h3><ul><li><b>IT</b>: slipped while the rupee strengthened.</li><li><b>Small caps</b> on Friday: down about 1% as the rally narrowed.</li></ul></div></div><p class="note" style="color:#141414"><a href="#w1">[1]</a> <a href="#w3">[3]</a> <a href="#w4">[4]</a></p></section>
+<section class="page"><h2 class="page-title">The money and the world</h2><div class="grid"><div class="panel"><h3>The money trail <span class="stamp fact">FACT</span></h3><p>Foreigners bought a net <b>₹45,960 crore</b> this week; domestic funds sold <b>₹24,197 crore</b>. The rupee firmed from about <b>95</b> to about <b>94</b> per dollar. Brent dropped below <b>$100</b> for the first time since October. <a href="#w5">[5]</a> <a href="#w6">[6]</a></p></div><div class="panel"><h3>The world this week <span class="stamp fact">FACT</span></h3><p>Democrats won both houses of the US Congress in the midterms, and the Dow jumped about <b>3%</b> that day. Gulf oil exports recovered, which helped sink crude. <a href="#w7">[7]</a> <a href="#w6">[6]</a></p></div></div></section>
+<section class="page"><h2 class="page-title">Report card</h2><div class="panel"><table class="rc"><tr><th>Day</th><th>Our Pre Open call</th><th>Result</th></tr><tr><td>Mon–Fri</td><td>The series started on 11 Nov, so there were no calls this week.</td><td>—</td></tr></table><p class="note">In real issues, each Pre Open call is listed here with ✅ held or ❌ wrong, plus one honest line on what we missed.</p></div></section>
+<section class="page"><h2 class="page-title">Number and word of the week</h2><div class="grid"><div class="panel word"><div class="w">₹45,960 CR</div><p>Foreign money in a single week, about ₹9,000 crore every trading day.</p></div><div class="panel word"><div class="w">BREADTH</div><p>How many stocks join a move. On Friday the Nifty rose 2% while far more NSE stocks fell than rose. A narrow rally is like a party where only the VIPs are dancing.</p></div></div></section>
+<section class="page"><h2 class="page-title">The fine print</h2><div class="closing"><div class="fine"><p>Sample Week That Was, rebuilt after the fact. Figures are rounded to whole numbers. Weekly changes are worked out from reported daily closes.</p><ol><li id="w1"><a href="https://www.oquilia.com/news/nifty-50-pre-market-03-november-2026">Oquilia · 2 Nov close and Reliance</a>; <a href="https://www.oquilia.com/news/stock-market-today-nifty-50-closing-04-november-2026">4 Nov</a>; <a href="https://www.icicidirect.com/futures-and-options/news/nifty-october-futures-trade-at-a-premium/5042082">ICICI Direct · 5 Nov</a>; <a href="https://www.oquilia.com/news/stock-market-today-nifty-50-closing-06-november-2026">Oquilia · 6 Nov</a></li><li id="w2"><a href="https://www.icicidirect.com/futures-and-options/news/nifty-october-futures-trade-at-a-premium/5038532">ICICI Direct · 30 Oct close and VIX</a>; <a href="https://www.oquilia.com/markets/this-month/2026-11">Oquilia · November indices</a></li><li id="w3"><a href="https://www.jmfinancialservices.in/market-news-and-insights/1745773">JM Financial · 5 Nov FPI flow</a></li><li id="w4"><a href="https://getbelong.com/blog/gift-nifty-today/">Belong · IT on 4 Nov</a></li><li id="w5"><a href="https://stockpil.com/fii-vs-dii-this-week-2026-11-06/">StockPil · weekly FII/DII</a></li><li id="w6"><a href="https://tradingeconomics.com/commodity/brent-crude-oil/news/598237">Trading Economics · Brent</a>; <a href="https://telanganatoday.com/rupee-rallies-52-paise-to-settle-at-93-89-against-us-dollar">PTI · rupee</a></li><li id="w7"><a href="https://www.jmfinancialservices.in/market-news-and-insights/1744920">JM Financial · US midterms and Dow</a></li></ol></div><div class="disclaimer">For information and education only. Not personal financial advice, a recommendation to buy or sell, or a trading signal.</div></div></section></main>
+</body></html>

@@ -260,6 +260,7 @@ If a push is refused, the Claude GitHub App needs access to `sriniurs/nifty` (Gi
 | `01-nifty-comic/Nifty-Chronicles-Master-Reference.md` | This rulebook (v3.1) |
 | `01-nifty-comic/examples/Nifty-Chronicles-Post-Market-SAMPLE-2026-11-11.html` | **Approved Post Market template.** Edit in place: CSS, components and section order |
 | `01-nifty-comic/examples/Nifty-Chronicles-Pre-Open-SAMPLE-2026-11-11.html` | **Approved Pre Open template** |
+| `01-nifty-comic/examples/Nifty-Chronicles-Holiday-Special-SAMPLE-2026-11-10.html`, `...Week-That-Was-SAMPLE-2026-11-07.html`, `...Week-Ahead-SAMPLE-2026-11-08.html` | **Approved Holiday Special, Week That Was and Week Ahead templates** (in the repo: `templates/holiday-template.html`, `templates/week-that-was-template.html`, `templates/week-ahead-template.html`) |
 | `01-nifty-comic/examples/Nifty-Chronicles-2026-11-11-v2.2.html` | The last single-edition daily in the v2.2 format (reference only) |
 | `01-nifty-comic/examples/Nifty-Chronicles-2026-11-09.html`, `Storm-Watch-holiday-special-2026-11-10.html` | Earlier approved looks; Storm Watch is the holiday special |
 | `01-nifty-comic/capt-nifty-reference-image.png` | Captain Nifty character reference |
