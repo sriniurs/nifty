@@ -263,7 +263,7 @@ If a push is refused, the Claude GitHub App needs access to `sriniurs/nifty` (Gi
 
 Every edition, after it is published, also produces a share kit and sends it to Srini. He posts it himself for now.
 
-1. **Image:** run `python3 templates/make-share-card.py issues/<file>.html share/<file-stem>.png "<label>|<value>" "<label>|<value>"`. It makes a **1200×675 PNG** with the edition tag, title, sub-headline, two key numbers (whole numbers) and the cover art.
+1. **Image:** run `python3 templates/make-share-card.py issues/<file>.html share/<file-stem>.png "<label>|<value>" "<label>|<value>"`. It makes a **1200×675 PNG** with the edition tag, title, sub-headline, two key numbers (whole numbers) and the cover art, plus a footer: "To know more: srinipresents.com/nifty" and "💬 Check the comments for the full article". Put the issue link in the first comment/reply, not the main post.
    - Post Market: Nifty close + the day's change in points.
    - Pre Open: GIFT Nifty with its quote time + one overnight number.
    - Holiday Special: the last close + one global number.

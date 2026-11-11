@@ -39,8 +39,8 @@ h1{{font-family:Bangers,Impact,sans-serif;font-weight:400;font-size:78px;line-he
 .s{{font-family:Bangers,Impact,sans-serif;font-size:34px;line-height:1.1;margin-bottom:18px}}
 .ts{{display:flex;gap:14px}}.t{{background:#fff;border:4px solid #141414;padding:8px 14px;min-width:200px}}
 .n{{font-family:Bangers,Impact,sans-serif;font-size:46px;line-height:1}}.l{{font-size:17px;font-weight:700;text-transform:uppercase}}
-.f{{margin-top:18px;font-weight:700;font-size:20px}}.art svg{{width:540px;height:540px;display:block;border:5px solid #141414}}
-</style></head><body><div class="c"><div><span class="tag">{html.escape(tag)}</span><h1>NIFTY<br>CHRONICLES</h1><div class="s">{html.escape(sub)}</div><div class="ts">{tiles}</div><div class="f">srinipresents.com/nifty · srini.presents</div></div><div class="art">{svg}</div></div></body></html>'''
+.f{{margin-top:18px;font-weight:700;font-size:20px}}.km{{background:#141414;color:#fff;border:4px solid #141414;padding:8px 12px;font-size:21px;font-weight:800;display:inline-block}}.km b{{color:#ffd83a}}.cm{{margin-top:10px;font-size:20px;font-weight:800}}.art svg{{width:540px;height:540px;display:block;border:5px solid #141414}}
+</style></head><body><div class="c"><div><span class="tag">{html.escape(tag)}</span><h1>NIFTY<br>CHRONICLES</h1><div class="s">{html.escape(sub)}</div><div class="ts">{tiles}</div><div class="f"><div class="km">To know more: <b>srinipresents.com/nifty</b></div><div class="cm">💬 Check the comments for the full article</div></div></div><div class="art">{svg}</div></div></body></html>'''
 
 tmp = os.path.splitext(out)[0] + '.card.html'
 open(tmp, 'w', encoding='utf-8').write(card)
