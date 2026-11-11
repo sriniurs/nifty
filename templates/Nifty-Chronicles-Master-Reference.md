@@ -34,6 +34,26 @@ If NSE holds a special Saturday or Sunday session (for example on Budget day), t
 | `<title>` | `Nifty Chronicles Post Market \| <Weekday D Mon YYYY>` | `Nifty Chronicles Pre Open \| <Weekday D Mon YYYY>` |
 | Approved sample | `examples/Nifty-Chronicles-Post-Market-SAMPLE-2026-11-11.html` | `examples/Nifty-Chronicles-Pre-Open-SAMPLE-2026-11-11.html` |
 
+### 1A. The reading chain (keep the flow)
+
+Every edition links **back** to the edition before it and **forward** to the next one, so readers move through the series like chapters.
+
+- **Back link:** a `.prev-line` strip directly under the cover, e.g. "← Missed the morning? Read today's Pre Open…". Link to the **exact URL** of the previous issue: check `issues/` for the newest file of that edition. If it doesn't exist, link to https://srinipresents.com/nifty/.
+- **Forward link:** a black `.chain-box` panel just before the fine print, holding a yellow time badge and one line on what the next edition will answer. Link to https://srinipresents.com/nifty/, because the next issue doesn't exist yet.
+
+| This edition | Back link to | Forward link to |
+|---|---|---|
+| Pre Open (Mon) | Sunday's Week Ahead | Today's Post Market, 4 pm |
+| Pre Open (Tue–Fri) | Last evening's Post Market (or the Holiday Special after a holiday) | Today's Post Market, 4 pm |
+| Post Market (Mon–Thu) | Today's Pre Open | Pre Open, 3 am |
+| Post Market (Fri) | Today's Pre Open | The Week That Was, Saturday 4 pm |
+| Post Market (day before a weekday holiday) | Today's Pre Open | Holiday Special, 4 pm tomorrow |
+| Holiday Special | The last Post Market | Pre Open, 3 am on the next trading day |
+| The Week That Was (Sat) | Friday's Post Market | The Week Ahead, Sunday 4 pm |
+| The Week Ahead (Sun) | Saturday's Week That Was | Pre Open, Monday 3 am |
+
+Always work out "next" from the actual calendar, including holidays. The forward line should tease a question, e.g. "Did today's call hold? Find out at 4 pm."
+
 **Rule of no repetition:** each fact has one home. If it belongs to Pre Open, Post Market only teases it, and the reverse.
 
 | Content | Post Market | Pre Open |
@@ -248,6 +268,7 @@ If a push is refused, the Claude GitHub App needs access to `sriniurs/nifty` (Gi
 - The cover scene differs from the previous issue of the same edition.
 - Render at **1100, 390 and 320px** wide: no horizontal overflow, no clipped lettering, readable tiles.
 - Exactly one call (Pre Open), with a "we are wrong if" line.
+- A back link under the cover and a "Next up" box before the fine print, both matching the §1A table.
 - The fine print ends with exactly: **For information and education only. Not personal financial advice, a recommendation to buy or sell, or a trading signal.**
 - Copyright: original art only, no copied article passages.
 
@@ -273,7 +294,7 @@ If a push is refused, the Claude GitHub App needs access to `sriniurs/nifty` (Gi
 
 ## 11. What changed
 
-**v3.1 (11 Nov 2026):** the 4 pm slot now runs every day. It publishes the Holiday Special on weekday NSE holidays, The Week That Was on Saturdays and The Week Ahead on Sundays. Each has its own look, filename and title (§6A–6C).
+**v3.1 (11 Nov 2026):** added the reading chain (§1A): every edition links back to the previous edition and forward to the next. the 4 pm slot now runs every day. It publishes the Holiday Special on weekday NSE holidays, The Week That Was on Saturdays and The Week Ahead on Sundays. Each has its own look, filename and title (§6A–6C).
 
 **v3.0, from v2.2:**
 
