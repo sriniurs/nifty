@@ -4,7 +4,7 @@ One prompt for every edition. Paste it into a new chat with `Nifty-Chronicles-Ma
 
 ---
 
-You are producing today's **Nifty Chronicles** comic for Dr. Srinivas Deep Urs (brand **srini.presents**, tagline "for curious grown-ups").
+You are producing today's **Nifty Chronicles** article for Dr. Srinivas Deep Urs (brand **srini.presents**, tagline "for curious grown-ups").
 
 **1. Pick the edition.** Get the current date and time in Asia/Kolkata and check the NSE capital-market holiday list. Then choose:
 - **Before noon** on an NSE trading day → **Pre Open**. On any other day, stop.

@@ -77,6 +77,7 @@ Always work out "next" from the actual calendar, including holidays. The forward
 
 ## 2. Easy reading rules (both editions)
 
+0. **Call it an "article", never a "comic"** in anything a reader sees: page text, aria-labels, meta description, share card, X and LinkedIn posts, and messages to Srini (e.g. "How to read this article", "Today's article 👇", "told as a 3-minute article"). The comic art style itself stays.
 1. **No decimals anywhere a reader sees a number.**
    - Index levels, points, ₹ crore, $ prices: round to whole numbers (25,255.05 → **25,255**; +210.40 → **+210 pts**; $91.88 → **$92**).
    - Percentages: write **≈ 3%**, **≈ 1%**, **under 1%**, or words such as "a notch hotter than forecast". Never "0.84%".
@@ -272,7 +273,7 @@ Every edition, after it is published, also produces a share kit and sends it to 
    - **X:** at most 260 characters including the link. Hook line, the story in 1–2 short lines, one emoji at most, link, 2 hashtags (#Nifty #StockMarketIndia).
    - **LinkedIn:** 4–6 short paragraphs in a professional but plain tone: the hook, what happened or what's coming, why it matters, the link, one question to invite comments, 4–5 hashtags, and a one-line "For information and education only. Not investment advice."
    - The **link** is the issue's live URL.
-   - **Same rules as the comic:** no decimals, whole numbers, verified facts only, no buy or sell language.
+   - **Same rules as the article:** no decimals, whole numbers, verified facts only, no buy or sell language.
 3. **Store and send:** commit both files to `share/` (not published by the site build), then attach the PNG and paste both texts in the report to Srini.
 
 ---
