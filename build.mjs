@@ -39,8 +39,28 @@ const sections = [...months].map(([month, posts]) =>
   '</ul></section>'
 ).join('\n');
 
+// Same Back / Home bar as the main site, added to every issue page at build time.
+const siteBar = `<!-- sitenav:auto --><style>
+.sp-bar{position:sticky;top:0;z-index:9999;display:flex;gap:8px;align-items:center;padding:8px 12px;background:rgba(255,253,244,.94);border-bottom:2px solid #09283f;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font:700 14px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.sp-bar a{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;border:2px solid #09283f;background:#fff;color:#09283f;text-decoration:none;box-shadow:2px 2px 0 #09283f}
+.sp-bar a:hover,.sp-bar a:focus-visible{background:#ffe53a}
+.sp-bar a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 #09283f}
+.sp-bar .sp-brand{margin-left:auto;border:0;box-shadow:none;background:none;padding:8px 4px;font:bold italic 15px Georgia,serif;color:#bc2236}
+@media print{.sp-bar{display:none}}
+</style>
+<nav class="sp-bar" aria-label="Site"><a href="/nifty/" id="sp-back" aria-label="Go back">&larr; Back</a><a href="/" aria-label="Home page">&#8962; Home</a><a class="sp-brand" href="/nifty/">The Nifty Chronicles</a></nav>
+<script>(function(){var b=document.getElementById('sp-back');if(!b)return;b.addEventListener('click',function(e){var r=document.referrer;if(r&&r.indexOf(location.origin)===0&&history.length>1){e.preventDefault();history.back();}});})();</script>
+<!-- /sitenav:auto -->`;
+const addBar = html => html.includes('<!-- sitenav:auto -->') ? html
+  : html.replace(/<body\b[^>]*>/i, tag => tag + '\n' + siteBar + '\n');
+
 mkdirSync(output, { recursive: true });
 cpSync(source, output + '/' + source, { recursive: true });
+for (const entry of readdirSync(output + '/' + source, { withFileTypes: true })) {
+  if (!entry.isFile() || !/\.html$/i.test(entry.name)) continue;
+  const file = output + '/' + source + '/' + entry.name;
+  writeFileSync(file, addBar(readFileSync(file, 'utf8')));
+}
 for (const asset of ['style.css', 'captain-nifty-marine-drive.jpg']) cpSync(asset, output + '/' + asset);
 const latest = issues[0];
 writeFileSync(output + '/index.html', [
@@ -48,7 +68,7 @@ writeFileSync(output + '/index.html', [
   '<meta name="viewport" content="width=device-width,initial-scale=1">',
   '<meta name="description" content="Follow Captain Nifty through illustrated stories about the Indian stock market.">',
   '<title>The Nifty Chronicles | srini.presents</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&amp;display=swap"><link rel="stylesheet" href="./style.css?v=retro-title"></head>',
-  '<body><main class="page"><nav aria-label="Site navigation"><a class="brand" href="https://sriniurs.github.io/">← srini.presents</a><a class="nav-link" href="#archive">Issue archive ↓</a></nav>',
+  '<body><main class="page"><nav aria-label="Site navigation"><a class="brand" href="/">← srini.presents</a><a class="nav-link" href="#archive">Issue archive ↓</a></nav>',
   '<header class="cover"><div class="intro"><p class="kicker">An illustrated market series</p>',
   '<h1><span>The Nifty</span> <span>Chronicles</span></h1>',
   '<p class="tagline">Follow Captain Nifty through market rallies, plot twists and the trading day.</p>',
@@ -58,6 +78,6 @@ writeFileSync(output + '/index.html', [
   '<figure class="cover-art"><img src="./captain-nifty-marine-drive.jpg" width="1254" height="1254" alt="Captain Nifty, a green candlestick superhero with a red cape, swoops over the lights of Marine Drive in Mumbai." fetchpriority="high"></figure></header>',
   '<section id="archive" class="archives" aria-labelledby="archive-title"><div class="archive-intro"><p class="kicker">The back issues</p><h2 id="archive-title">Issue archive</h2><p>Browse by upload month, newest first.</p></div>',
   sections || '<p>The first issue will appear here after upload.</p>',
-  '</section><footer><a href="https://sriniurs.github.io/">srini.presents</a><span>The Nifty Chronicles</span></footer>',
+  '</section><footer><a href="/">srini.presents</a><span>The Nifty Chronicles</span></footer>',
   '</main></body></html>',
 ].join('\n'));
