@@ -1,0 +1,284 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Nifty Chronicles | Thursday 12 Nov 2026</title><meta name="description" content="Nifty Chronicles for Thursday 12 Nov 2026: a tug-of-war day that ended 44 points up, the 4 pm inflation surprise, and the map and call for Friday. A 4-minute illustrated article."><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&amp;family=Comic+Neue:wght@400;700&amp;display=swap"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+.floor{grid-template-columns:112px 1fr}.floor .lvl{font-size:22px}.floor>*{min-width:0}@media(max-width:420px){.floor{grid-template-columns:92px 1fr;gap:8px;padding:10px 8px}.floor .lvl{font-size:20px}.bar{grid-template-columns:100px 1fr 52px;gap:5px}.grid{grid-template-columns:minmax(0,1fr)}.checks{grid-template-columns:minmax(0,1fr)}.panel{padding:15px}.cast{grid-template-columns:72px 1fr}.cast svg{width:72px;height:72px}}@media print{body{background:white}.book{padding:0}.panel,.cover,.page-title,.day,.door{box-shadow:none}.page{break-inside:auto}}
+
+/* Layout: a comic book read top to bottom: cover, then "pages" of bordered panels on a halftone ground.
+   Single visual world (printed comic), so one theme with every color set explicitly. */
+:root{
+  --paper:#ffffff;
+  --ground:#2a6fdb;      /* page ground behind panels: printed-blue */
+  --ink:#141414;
+  --red:#e8382b;
+  --yellow:#ffd83a;
+  --green:#19a058;
+  --cyan:#3cc3ee;
+  --pink:#ff86b0;
+  --muted:#4a4a4a;
+  --display:"Bangers",Impact,"Arial Black",sans-serif;
+  --body:"Comic Neue","Comic Sans MS","Trebuchet MS",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.45;
+  background-image:radial-gradient(rgba(255,255,255,.18) 1.6px,transparent 1.7px);
+  background-size:12px 12px;
+}
+.book{max-width:1060px;margin:0 auto;padding-block:24px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:grid;gap:28px}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.04em;margin:0;text-wrap:balance;line-height:1}
+a{color:var(--ink)}
+a:focus-visible,input:focus-visible+span{outline:3px dashed var(--red);outline-offset:3px}
+
+/* panels */
+.page{display:grid;gap:14px}
+.page-title{display:inline-block;justify-self:start;background:var(--yellow);border:4px solid var(--ink);padding:6px 16px 2px;
+  font-family:var(--display);font-size:clamp(26px,4.5vw,38px);box-shadow:6px 6px 0 var(--ink);transform:rotate(-1.2deg)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.panel{position:relative;background:var(--paper);border:4px solid var(--ink);padding:18px;min-width:0;box-shadow:6px 6px 0 var(--ink)}
+.panel.dots{background-image:radial-gradient(rgba(20,20,20,.09) 1.4px,transparent 1.5px);background-size:9px 9px}
+.panel h3{font-size:26px;margin-bottom:8px}
+.caption{display:inline-block;background:var(--yellow);border:3px solid var(--ink);padding:4px 10px;font-weight:700;font-size:14px;
+  text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.wide{grid-column:1/-1}
+
+/* speech bubbles */
+.bubble{position:relative;background:var(--paper);border:3px solid var(--ink);border-radius:22px;padding:12px 16px;font-weight:700;margin:6px 0 18px}
+.bubble::after{content:"";position:absolute;left:34px;bottom:-16px;border:14px solid transparent;border-top-color:var(--ink);border-bottom:0}
+.bubble::before{content:"";position:absolute;left:37px;bottom:-10px;border:11px solid transparent;border-top-color:var(--paper);border-bottom:0;z-index:1}
+.bubble.right::after{left:auto;right:34px}.bubble.right::before{left:auto;right:37px}
+.shout{font-family:var(--display);font-size:clamp(30px,6vw,52px);color:var(--yellow);-webkit-text-stroke:2px var(--ink);
+  text-shadow:4px 4px 0 var(--ink);transform:rotate(-6deg);display:inline-block;letter-spacing:.05em}
+
+/* truth stamps */
+.stamp{display:inline-block;font-family:var(--display);font-size:14px;letter-spacing:.08em;border:2px solid var(--ink);padding:1px 7px 0;
+  margin-left:6px;vertical-align:middle;transform:rotate(-3deg)}
+.fact{background:var(--cyan)}.est{background:var(--yellow)}.opi{background:var(--pink)}
+
+/* cover */
+.cover{position:relative;background:var(--red);border:5px solid var(--ink);box-shadow:8px 8px 0 var(--ink);overflow:hidden;
+  padding:22px clamp(16px,4vw,36px) 26px;display:grid;gap:16px;grid-template-columns:1fr auto;align-items:center;color:var(--ink)}
+.cover::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 75% 55%,rgba(255,216,58,.35) 0 8deg,transparent 8deg 18deg);pointer-events:none}
+.cover > *{position:relative}
+.issue{display:flex;gap:10px;flex-wrap:wrap;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+.issue span{background:var(--paper);border:3px solid var(--ink);padding:3px 9px}
+.cover h1{font-size:clamp(46px,9vw,96px);color:var(--yellow);-webkit-text-stroke:3px var(--ink);text-shadow:6px 6px 0 var(--ink);margin-top:6px}
+.cover .sub{font-family:var(--display);font-size:clamp(22px,3.6vw,32px);color:var(--paper);-webkit-text-stroke:1px var(--ink);text-shadow:3px 3px 0 var(--ink)}
+.cover .blurb{background:var(--paper);border:3px solid var(--ink);padding:10px 14px;max-width:560px;font-weight:700}
+.hero-big{width:min(240px,32vw)}
+@media (max-width:640px){.cover{grid-template-columns:1fr}.hero-big{justify-self:center;width:180px}}
+
+/* stat tiles in the "previously" page */
+.big{font-family:var(--display);font-size:clamp(40px,7vw,60px);line-height:.9}
+.up{color:var(--green)}.down{color:var(--red)}
+.chart-wrap{overflow-x:auto}
+.chart-wrap svg{width:100%;min-width:480px;height:auto;display:block}
+svg text{font-family:var(--body);font-weight:700;fill:var(--ink)}
+
+/* cast */
+.cast{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:start}
+.cast svg{width:96px;height:96px}
+.cast .name{font-family:var(--display);font-size:24px;letter-spacing:.04em}
+.cast .tag{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+
+/* sector bars */
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:110px 1fr 52px;gap:8px;align-items:center;font-weight:700;font-variant-numeric:tabular-nums}
+.bar .track{height:20px;border:3px solid var(--ink);background:var(--paper)}
+.bar .fill{height:100%;background:var(--green);border-right:3px solid var(--ink)}
+.bar .fill.alt{background:var(--cyan)}
+
+/* the tower of levels */
+.tower{display:grid;gap:0;border:4px solid var(--ink);font-variant-numeric:tabular-nums}
+.floor{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;padding:10px 12px;border-top:3px solid var(--ink)}
+.floor:first-child{border-top:0}
+.floor .lvl{font-family:var(--display);font-size:24px}
+.floor.r{background:#ffd9d4}.floor.s{background:#d4f2e0}
+.floor.now{background:var(--yellow);font-weight:700}
+.floor small{display:block;color:var(--muted);font-weight:400}
+
+/* week strip */
+.week{display:grid;gap:12px;grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:880px){.week{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}}
+.day{background:var(--paper);border:4px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:12px;min-width:0;display:grid;gap:8px;align-content:start}
+.day .d{font-family:var(--display);font-size:28px;background:var(--ink);color:var(--yellow);margin:-12px -12px 0;padding:6px 12px 2px}
+.day.boss .d{background:var(--red);color:var(--paper)}
+.day ul{margin:0;padding-left:18px}
+.day li{margin-bottom:4px}
+.day .g{font-size:14px;color:var(--muted);border-top:2px dashed var(--ink);padding-top:6px}
+
+/* endings */
+.doors{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.door{border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:16px;display:grid;gap:8px;align-content:start;background:var(--paper)}
+.door h3{font-size:30px}
+.door .odds{font-family:var(--display);font-size:44px;line-height:1}
+.door.bull{background:#d4f2e0}.door.base{background:#fff4c2}.door.bear{background:#ffd9d4}
+.door dl{margin:0;display:grid;gap:6px}
+.door dt{font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.06em}
+.door dd{margin:0}
+
+/* checklist */
+.checks{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.check{display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-weight:700}
+.check input{position:absolute;opacity:0;width:1px;height:1px}
+.check span.box{flex:0 0 26px;height:26px;border:3px solid var(--ink);background:var(--paper);display:grid;place-items:center;font-family:var(--display);font-size:22px;line-height:1}
+.check input:checked+span.box{background:var(--green);color:var(--paper)}
+.check input:checked+span.box::after{content:"✓"}
+.check input:focus-visible+span.box{outline:3px dashed var(--red);outline-offset:3px}
+
+/* fine print */
+.fine{background:var(--paper);border:4px solid var(--ink);padding:18px;font-size:15px;display:grid;gap:12px}
+.fine h3{font-size:26px}
+.fine ol,.fine ul{margin:0;padding-left:20px}
+.fine li{margin-bottom:4px}
+.disclaimer{background:var(--ink);color:var(--paper);border:4px solid var(--ink);padding:16px;font-weight:700}
+.disclaimer b{color:var(--yellow)}
+.legend{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-weight:700}
+@media (prefers-reduced-motion:no-preference){
+  .shout{animation:pop .6s ease-out both}
+  @keyframes pop{0%{transform:rotate(-6deg) scale(.6)}70%{transform:rotate(-6deg) scale(1.08)}100%{transform:rotate(-6deg) scale(1)}}
+}
+
+.grid>*{min-width:0}.big{overflow-wrap:anywhere}.fine a{overflow-wrap:anywhere}.floor{grid-template-columns:112px 1fr}.floor>*{min-width:0}@media(max-width:420px){.book{padding-left:12px;padding-right:12px}.grid{grid-template-columns:minmax(0,1fr)}.panel{padding:15px}.cast{grid-template-columns:64px 1fr}.cast svg{width:64px;height:64px}.floor{grid-template-columns:88px 1fr;gap:8px;padding:10px 8px}.floor .lvl{font-size:20px}.bar{grid-template-columns:98px 1fr 52px;gap:5px}.big{font-size:44px}.issue{font-size:12px}.week{grid-template-columns:minmax(0,1fr)}.doors{grid-template-columns:minmax(0,1fr)}}
+.cover{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:center;background:var(--yellow)}.cover::before{content:none}
+.cover h1{font-size:clamp(40px,6.2vw,77px);color:var(--ink);-webkit-text-stroke:0;text-shadow:none;text-transform:uppercase;letter-spacing:.035em}.cover .sub{color:var(--ink);-webkit-text-stroke:0;text-shadow:none}
+.cover-copy{display:grid;gap:12px}.cover .blurb{margin:0}.cover-art{margin:0;min-width:0}
+.cover-art img,.cover-art svg{display:block;width:100%;height:auto;border:4px solid var(--ink);box-shadow:5px 5px 0 var(--ink);background:var(--yellow)}
+.cast-portrait{width:100%;aspect-ratio:1;object-fit:cover;border:3px solid var(--ink)}.cast-portrait-frame{display:block;overflow:hidden;aspect-ratio:1;border:3px solid var(--ink)}.cast-portrait-frame img{display:block;aspect-ratio:1;width:100%;border:0;transform:scale(1.65);transform-origin:50% 42%}
+.cast p{margin:4px 0 0}.note{font-size:14px}.week{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.floor{grid-template-columns:minmax(98px,auto) 1fr}.floor .lvl{font-size:22px}.door dt{margin-top:5px}
+.chart-wrap svg{min-width:550px;max-width:850px;margin:auto}.bar{grid-template-columns:105px 1fr 52px}.fine{overflow-wrap:anywhere}
+@media(max-width:680px){.cover{grid-template-columns:minmax(0,1fr)}.cover-copy{display:contents}.cover h1{order:1;font-size:clamp(38px,10vw,61px)}.cover .sub{order:2}.cover-art{order:3}.cover .blurb{order:4}.cover-copy>.issue:last-child{order:5}}
+@media(max-width:420px){.floor{grid-template-columns:90px 1fr;gap:8px;padding:10px 8px}.floor .lvl{font-size:19px}.bar{grid-template-columns:99px 1fr 52px;gap:5px}}
+ .closing{display:grid;gap:14px}.notice{background:#141414;color:#fff;border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:12px 16px;font-weight:700}.notice b{color:var(--yellow)}.day.storm .d{background:#2b3a8f;color:var(--yellow)}.chain{display:grid;gap:8px;margin:8px 0}.chain span{display:block;border:3px solid var(--ink);padding:6px 10px;font-weight:700;background:#eaf6ff}.chain span:nth-child(odd){background:#fff4c2}.chain i{display:block;text-align:center;font-style:normal;font-family:var(--display);font-size:22px;line-height:1}@media(min-width:720px){.grid.two{grid-template-columns:1fr 1fr}}
+/* ===== HOLIDAY SPECIAL: night storyboard ===== */
+body.night{--ground:#101a4a;background-color:#101a4a;background-image:radial-gradient(rgba(255,255,255,.10) 1.4px,transparent 1.5px)}
+.issue span.special-tag,.special-tag{display:inline-block;background:var(--red);color:#fff;border:3px solid var(--ink);padding:3px 10px;font-family:var(--display);letter-spacing:.08em;font-size:18px;transform:rotate(-2deg)}
+.story{display:grid;gap:22px;position:relative}
+.chapter{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:start}
+.clock{position:sticky;top:10px;background:var(--yellow);border:4px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:8px 10px;text-align:center;transform:rotate(-2deg)}
+.clock .t{font-family:var(--display);font-size:30px;line-height:1}
+.clock .d{font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+.frame{background:var(--paper);border:4px solid var(--ink);box-shadow:7px 7px 0 #000;padding:18px;display:grid;gap:12px;min-width:0}
+.frame h2{font-size:clamp(28px,4.4vw,42px)}
+.frame.splash{background:#ffd83a;background-image:repeating-conic-gradient(from 0deg at 50% 50%,rgba(232,56,43,.18) 0 7deg,transparent 7deg 16deg)}
+.frame.dark{background:#1d2a6b;color:#fff}.frame.dark a{color:#fff}
+.talk{display:grid;gap:10px}
+.say{position:relative;border:3px solid var(--ink);border-radius:20px;padding:10px 14px;font-weight:700;background:#fff;color:var(--ink);max-width:560px}
+.say b.who{display:block;font-family:var(--display);font-weight:400;letter-spacing:.06em;font-size:15px;color:var(--red)}
+.say.r{justify-self:end;background:#fff4c2}
+.facts{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.fact-tile{border:3px solid var(--ink);background:#fff;color:var(--ink);padding:8px 10px}
+.fact-tile .n{font-family:var(--display);font-size:32px;line-height:1}
+.fact-tile .l{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.boom{font-family:var(--display);font-size:clamp(56px,13vw,120px);line-height:.9;color:var(--red);-webkit-text-stroke:3px var(--ink);text-shadow:6px 6px 0 var(--ink);transform:rotate(-4deg);display:inline-block}
+.planks{display:grid;gap:0;border:4px solid var(--ink);font-variant-numeric:tabular-nums}
+.planks div{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:8px 12px;border-top:3px solid var(--ink);align-items:center}
+.planks div:first-child{border-top:0}.planks .v{font-family:var(--display);font-size:24px}
+.planks .r{background:#ffd9d4}.planks .s{background:#d4f2e0}.planks .c{background:var(--yellow);font-weight:700}
+@media(max-width:640px){.chapter{grid-template-columns:minmax(0,1fr)}.clock{position:static;justify-self:start}.planks div{grid-template-columns:96px 1fr}}
+
+.special-tag{background:#3cc3ee!important;color:#141414!important}
+.special-tag.pm{background:#e8382b!important;color:#fff!important}
+.strip{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.strip .frame{align-content:start}.strip h3{font-size:30px}.strip p{margin:0}
+.frame .tag{justify-self:start;background:#141414;color:#ffd83a;font-family:var(--display);letter-spacing:.06em;padding:2px 10px;font-size:18px}
+.frame.dark .tag{background:#ffd83a;color:#141414}
+.meter{height:22px;border:3px solid var(--ink);background:linear-gradient(90deg,#3cc3ee,#19a058 40%,#ffd83a 65%,#e8382b);position:relative;margin:6px 0 10px}
+.meter span{display:block;height:100%;border-right:5px solid #141414}
+.word{background:#fff4c2}.word .w{font-family:var(--display);font-size:clamp(44px,9vw,72px);line-height:1;color:var(--red);-webkit-text-stroke:2px var(--ink);text-shadow:4px 4px 0 var(--ink);transform:rotate(-3deg);display:inline-block;margin-bottom:6px}
+.hw li{margin-bottom:8px}
+.notice .stamp{color:#141414}
+.night-cover{background:#1d2a6b!important;color:#fff}.night-cover h1{color:#ffd83a!important}.night-cover .sub{color:#fff!important}.night-cover .blurb{color:#141414}
+.night-cover .cover-art svg{background:#101a4a}
+.chapter h3{font-size:clamp(26px,4vw,36px)}
+.chain-box{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;background:#141414;color:#fff;border:4px solid #141414;box-shadow:6px 6px 0 #000;padding:14px 18px}
+.chain-box .ic{font-family:var(--display);font-size:clamp(26px,5vw,40px);line-height:1;background:var(--yellow);color:#141414;border:3px solid #fff;padding:6px 12px;transform:rotate(-3deg)}
+.chain-box p{margin:0;font-weight:700}.chain-box a{color:var(--yellow)}.chain-box b{color:var(--yellow)}
+.chain-box>*{min-width:0}.chain-box p{overflow-wrap:anywhere}@media(max-width:560px){.chain-box{grid-template-columns:minmax(0,1fr)}.chain-box .ic{justify-self:start}}
+.prev-line{background:#fff;border:3px solid #141414;box-shadow:4px 4px 0 #141414;padding:8px 14px;font-weight:700;font-size:15px}.prev-line a{color:#141414}
+.special-tag.dy{background:#19a058!important;color:#fff!important}
+</style></head><body><main class="book"><header class="cover"><div class="cover-copy"><div class="issue"><span style="background:var(--yellow)">srini.presents · for curious grown-ups</span><span class="special-tag dy">Daily</span></div><h1>Nifty Chronicles</h1><div class="sub">Tug-of-war, then a 4 pm storm</div><p class="blurb">The banks pulled one way, the carmakers the other. Captain Nifty wobbled in the middle all day and finished <b>44 points</b> up at <b>25,299</b>. Then, half an hour after the bell, India’s inflation number crossed the RBI’s red line.</p><div class="issue"><span>Thursday 12 November 2026</span><span>Data to 5:30 pm IST</span></div></div><figure class="cover-art"><svg viewBox="0 0 520 520" role="img" aria-label="Poster: Captain Nifty, a green candlestick hero with a red cape, stands on the knot in the middle of a tug-of-war rope. On the left a team labelled BANKS pulls hard; on the right a team labelled AUTOS pulls back. A dark storm cloud labelled CPI 6% rolls in at the top right, and a sign below reads CLOSE 25,299.">
+<defs><pattern id="tgh" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1.6" fill="#fff" opacity=".28"/></pattern></defs>
+<rect width="520" height="520" fill="#ff9f1c"/><rect width="520" height="520" fill="url(#tgh)"/>
+<g stroke="#141414" stroke-width="4"><path d="M300 70 q6 -40 52 -34 q22 -30 58 -10 q40 -6 44 30 q34 6 22 40 h-160 q-34 -4 -16 -26z" fill="#4a4f63"/></g>
+<path d="M370 108 l-14 34 h16 l-12 30" fill="none" stroke="#ffd83a" stroke-width="6" stroke-linejoin="round"/>
+<path d="M430 108 l-12 26 h14 l-10 24" fill="none" stroke="#ffd83a" stroke-width="5" stroke-linejoin="round"/>
+<rect x="318" y="40" width="112" height="30" fill="#ffd83a" stroke="#141414" stroke-width="3" transform="rotate(4 374 55)"/><text x="374" y="63" text-anchor="middle" textLength="92" lengthAdjust="spacingAndGlyphs" style="font-family:Bangers,Impact,sans-serif;font-size:22px;fill:#141414" transform="rotate(4 374 55)">CPI 6% AT 4 PM</text>
+<path d="M0 420 H520 V520 H0Z" fill="#19a058" stroke="#141414" stroke-width="4"/>
+<path d="M0 470 Q 140 450 260 472 T 520 466 V520 H0Z" fill="#127a43" stroke="#141414" stroke-width="3"/>
+<line x1="258" y1="420" x2="258" y2="470" stroke="#fff" stroke-width="6" stroke-dasharray="10 8"/>
+<path d="M30 330 C 140 344, 200 336, 258 338 S 400 332, 492 326" fill="none" stroke="#9a6a40" stroke-width="12" stroke-linecap="round"/>
+<path d="M30 330 C 140 344, 200 336, 258 338 S 400 332, 492 326" fill="none" stroke="#141414" stroke-width="3" stroke-dasharray="6 10"/>
+<g stroke="#141414" stroke-width="4">
+<g transform="translate(70,330)"><circle cx="-10" cy="-64" r="16" fill="#ffd9b0"/><path d="M-26 -46 h32 l10 52 h-46z" fill="#3cc3ee"/><line x1="-6" y1="6" x2="-28" y2="88" /><line x1="2" y1="6" x2="18" y2="88"/><line x1="-2" y1="-30" x2="30" y2="2"/></g>
+<g transform="translate(140,334)"><circle cx="-10" cy="-64" r="16" fill="#ffd9b0"/><path d="M-26 -46 h32 l10 52 h-46z" fill="#3cc3ee"/><line x1="-6" y1="6" x2="-28" y2="84"/><line x1="2" y1="6" x2="18" y2="84"/><line x1="-2" y1="-30" x2="30" y2="2"/></g>
+<g transform="translate(390,330)"><circle cx="10" cy="-64" r="16" fill="#ffd9b0"/><path d="M26 -46 h-32 l-10 52 h46z" fill="#e8382b"/><line x1="6" y1="6" x2="28" y2="88"/><line x1="-2" y1="6" x2="-18" y2="88"/><line x1="2" y1="-30" x2="-30" y2="2"/></g>
+<g transform="translate(460,326)"><circle cx="10" cy="-64" r="16" fill="#ffd9b0"/><path d="M26 -46 h-32 l-10 52 h46z" fill="#e8382b"/><line x1="6" y1="6" x2="28" y2="88"/><line x1="-2" y1="6" x2="-18" y2="88"/><line x1="2" y1="-30" x2="-30" y2="2"/></g>
+</g>
+<rect x="44" y="140" width="104" height="34" fill="#fff" stroke="#141414" stroke-width="4" transform="rotate(-6 96 157)"/><text x="96" y="165" text-anchor="middle" textLength="80" lengthAdjust="spacingAndGlyphs" style="font-family:Bangers,Impact,sans-serif;font-size:26px;fill:#19a058" transform="rotate(-6 96 157)">BANKS</text>
+<rect x="372" y="200" width="104" height="34" fill="#fff" stroke="#141414" stroke-width="4" transform="rotate(6 424 217)"/><text x="424" y="225" text-anchor="middle" textLength="80" lengthAdjust="spacingAndGlyphs" style="font-family:Bangers,Impact,sans-serif;font-size:26px;fill:#e8382b" transform="rotate(6 424 217)">AUTOS</text>
+<g transform="translate(258,272) scale(2.3)">
+<line x1="0" y1="-34" x2="0" y2="-20" stroke="#141414" stroke-width="4"/><line x1="0" y1="18" x2="0" y2="28" stroke="#141414" stroke-width="4"/>
+<path d="M-14 -16 C -40 -30 -56 -10 -70 -26 C -54 0 -36 6 -12 4 Z" fill="#e8382b" stroke="#141414" stroke-width="2.5"/>
+<rect x="-14" y="-22" width="28" height="40" rx="3" fill="#19a058" stroke="#141414" stroke-width="2.5"/>
+<rect x="-13" y="-16" width="26" height="8" rx="4" fill="#141414"/><circle cx="-6" cy="-12" r="2.6" fill="#fff"/><circle cx="6" cy="-12" r="2.6" fill="#fff"/>
+<path d="M-7 -2 q7 -5 14 0" fill="none" stroke="#141414" stroke-width="2"/>
+<circle cx="0" cy="8" r="6" fill="#ffd83a" stroke="#141414" stroke-width="1.5"/>
+<path d="M-14 -6 l-14 -12 M14 -6 l14 -12" stroke="#141414" stroke-width="3.5" stroke-linecap="round"/>
+</g>
+<text x="250" y="186" text-anchor="middle" style="font-family:Bangers,Impact,sans-serif;font-size:30px;fill:#fff;stroke:#141414;stroke-width:1.5px" transform="rotate(-4 250 186)">WOBBLE!</text>
+<line x1="258" y1="420" x2="258" y2="398" stroke="#141414" stroke-width="5"/>
+<rect x="196" y="440" width="124" height="36" fill="#ffd83a" stroke="#141414" stroke-width="4"/><text x="258" y="466" text-anchor="middle" textLength="104" lengthAdjust="spacingAndGlyphs" style="font-family:Bangers,Impact,sans-serif;font-size:24px;fill:#141414">CLOSE 25,299</text>
+<text x="500" y="510" text-anchor="end" style="font-family:'Comic Neue','Comic Sans MS',sans-serif;font-weight:700;font-size:14px;fill:#fff">srini.presents</text>
+</svg></figure></header><p class="prev-line">← This morning’s call: <a href="https://srinipresents.com/nifty/issues/2026-11-12-pre-open.html">“a careful day inside Wednesday’s walls”</a>. Scroll down to see if it held.</p>
+
+<section class="panel" style="padding:12px 16px"><div class="legend"><b>One edition a day.</b> What happened in India today, what it means, and our map and call for the next session. Badges: <span class="stamp fact">FACT</span> <span class="stamp est">ESTIMATE</span> <span class="stamp opi">OPINION</span></div></section>
+
+<section class="page" aria-labelledby="d1"><h2 class="page-title" id="d1">Today’s scoreboard</h2><div class="panel dots"><div class="facts"><div class="fact-tile"><div class="n" style="color:var(--green)">25,299</div><div class="l">Nifty 50 · up 44 pts</div></div><div class="fact-tile"><div class="n" style="color:var(--green)">81,911</div><div class="l">Sensex · up 32 pts</div></div><div class="fact-tile"><div class="n" style="color:var(--green)">61,519</div><div class="l">Bank Nifty · up 726 pts</div></div><div class="fact-tile"><div class="n" style="color:var(--green)">≈ 4%</div><div class="l">Realty · best sector</div></div><div class="fact-tile"><div class="n" style="color:var(--green)">≈ 1%</div><div class="l">Smallcap 100 · up</div></div><div class="fact-tile"><div class="n" style="color:var(--red)">≈ 1%</div><div class="l">Auto · worst sector, down</div></div></div><p class="note" style="margin-bottom:0">Closing figures for Thursday 12 November, compared with Wednesday. The Midcap 100 rose a little under 1%. Rounded for easy reading. <span class="stamp fact">FACT</span> <a href="#s1">[1]</a> <a href="#s2">[2]</a> <a href="#s3">[3]</a> <a href="#s4">[4]</a></p></div></section>
+
+<section class="page" aria-labelledby="d2"><h2 class="page-title" id="d2">The day in four frames</h2><div class="strip">
+<div class="frame"><div class="tag">9:15 am</div><h3>Slip at the start</h3><p>The Captain opened a little lower at <b>25,214</b> and slid to <b>25,143</b>, the day’s low, in the first few minutes.</p><div class="say"><b class="who">Captain Nifty</b>Who greased the rope?</div></div>
+<div class="frame"><div class="tag">By 9:40 am</div><h3>The banks dig in</h3><p>Banks and finance companies grabbed the rope. Within half an hour the Captain was back near <b>25,353</b>. Later he touched his best, <b>25,385</b>.</p><div class="say r"><b class="who">Prof. Earnings</b>Foreign buyers are still shopping. Banks are first on their list.</div></div>
+<div class="frame dark"><div class="tag">Around 3:00 pm</div><h3>Pulled back</h3><p>Carmakers, FMCG and oil-and-gas shares pulled the other way. By 3 pm the Captain was back to <b>25,252</b>, almost exactly Wednesday’s close.</p></div>
+<div class="frame splash"><div class="tag">3:30 pm</div><h3>Last tug wins</h3><p>A late pull in the closing minutes lifted him to <b>25,299</b>, up 44 points. A small gain, but the third up day in a row.</p></div>
+</div><p class="note" style="color:#fff">Open, high, low and close are reported figures; the 9:40 and 3:00 pm levels are from live updates. The time of the high was not reported. <span class="stamp fact">FACT</span> <a href="#s1">[1]</a> <a href="#s4">[4]</a> <a href="#s5">[5]</a></p></section>
+
+<section class="page" aria-labelledby="d3"><h2 class="page-title" id="d3">Heroes and laggards</h2><div class="grid">
+<div class="panel" style="background:#d4f2e0"><h3>Team Banks <span class="stamp fact">FACT</span></h3><ul><li><b>Bank Nifty</b> jumped 726 points and is close to its record high. Every one of its members closed higher.</li><li><b>HDFC Life, Shriram Finance and Bajaj Finance</b> were the top Nifty gainers, each up about 3–4%.</li><li><b>Realty</b> was the best sector, up about 4%.</li><li><b>Smaller companies</b> beat the big ones again: the Smallcap 100 rose about 1%.</li></ul><p class="note"><a href="#s1">[1]</a> <a href="#s2">[2]</a> <a href="#s3">[3]</a></p></div>
+<div class="panel" style="background:#ffd9d4"><h3>Team Autos <span class="stamp fact">FACT</span></h3><ul><li><b>Auto</b> was the weakest sector, down about 1%, with <b>Mahindra &amp; Mahindra</b> among the biggest Nifty drags.</li><li><b>Nestlé India and Hindustan Unilever</b> dragged FMCG lower; <b>ONGC</b> led oil and gas down.</li><li>Inside the Nifty, only <b>20 of 50</b> stocks rose. A few heavy banks did the lifting.</li></ul><div class="say r"><b class="who">Prof. Earnings</b>Thirty players let go of the rope, and the team still won. That’s what heavy banks can do.</div><p class="note"><a href="#s1">[1]</a> <a href="#s2">[2]</a> <a href="#s4">[4]</a></p></div>
+</div></section>
+
+<section class="page" aria-labelledby="d4"><h2 class="page-title" id="d4">The 4 pm storm cloud</h2><div class="grid">
+<div class="panel" style="background:#fff4c2"><h3>Inflation crossed the red line <span class="stamp fact">FACT</span></h3><div class="big">6%+</div><p>India’s retail inflation for October came in <b>just above 6%</b>, up from about 5½% in September. That is the highest in two years and the first time since October 2024 that it has crossed the top of the RBI’s 2–6% comfort band. It was also a touch hotter than economists expected.</p><p>Food did most of the damage: food inflation was close to <b>9%</b>, and onion prices were more than <b>double</b> a year ago.</p><p class="note">Released at 4 pm, after the close. <a href="#s6">[6]</a> <a href="#s7">[7]</a></p></div>
+<div class="panel"><h3>Why the Captain cares <span class="stamp opi">OPINION</span></h3><p>The RBI already raised its policy rate by a quarter point in October and hinted more could follow. Its next meeting is on <b>2–4 December</b>. A number above 6% makes another rise easier to argue for, and dearer loans are not what a rally wants to hear.</p><div class="say"><b class="who">Captain Nifty</b>So the market closed before the news… and opens with it on Friday?</div><div class="say r"><b class="who">Prof. Earnings</b>Exactly. Today’s gain was earned before anyone saw the number.</div><p class="note"><a href="#s7">[7]</a></p></div>
+</div></section>
+
+<section class="page" aria-labelledby="d5"><h2 class="page-title" id="d5">The last five sessions</h2><div class="panel"><div class="chart-wrap" tabindex="0" aria-label="Five-session bar chart"><svg viewBox="0 0 615 220" role="img" aria-label="Nifty closes: 6 Nov 25,030; 8 Nov Muhurat 24,986; 9 Nov 25,045; 11 Nov 25,255; 12 Nov 25,299"><g font-size="13"><line x1="65" x2="605" y1="190" y2="190" stroke="#bbb"/><text x="59" y="194" text-anchor="end">24,800</text><line x1="65" x2="605" y1="140" y2="140" stroke="#bbb"/><text x="59" y="144" text-anchor="end">25,000</text><line x1="65" x2="605" y1="90" y2="90" stroke="#bbb"/><text x="59" y="94" text-anchor="end">25,200</text><line x1="65" x2="605" y1="40" y2="40" stroke="#bbb"/><text x="59" y="44" text-anchor="end">25,400</text>
+<rect x="89" y="132.5" width="62" height="57.5" fill="#19a058" stroke="#141414" stroke-width="3"/><text x="120" y="124" text-anchor="middle">25,030</text><text x="120" y="211" text-anchor="middle">6 Nov</text>
+<rect x="197" y="143.5" width="62" height="46.5" fill="#e8382b" stroke="#141414" stroke-width="3"/><text x="228" y="135" text-anchor="middle">24,986</text><text x="228" y="211" text-anchor="middle">8 Nov*</text>
+<rect x="305" y="128.75" width="62" height="61.25" fill="#19a058" stroke="#141414" stroke-width="3"/><text x="336" y="120" text-anchor="middle">25,045</text><text x="336" y="211" text-anchor="middle">9 Nov</text>
+<rect x="413" y="76.25" width="62" height="113.75" fill="#19a058" stroke="#141414" stroke-width="3"/><text x="444" y="68" text-anchor="middle">25,255</text><text x="444" y="211" text-anchor="middle">11 Nov</text>
+<rect x="521" y="65.25" width="62" height="124.75" fill="#19a058" stroke="#141414" stroke-width="3"/><text x="552" y="57" text-anchor="middle">25,299</text><text x="552" y="211" text-anchor="middle">12 Nov</text>
+<line x1="65" x2="605" y1="190" y2="190" stroke="#141414" stroke-width="3"/></g></svg></div><p class="note">Green means a higher close than the session before, red means lower. <b>The axis starts at 24,800</b>, so small moves look bigger than they are. *8 Nov was the Muhurat session; 10 Nov was a holiday. Over these five sessions the Nifty gained about <b>760 points</b> from the 5 Nov close of about 24,537. <span class="stamp fact">FACT</span> <a href="#s8">[8]</a></p></div></section>
+
+<section class="page" aria-labelledby="d6"><h2 class="page-title" id="d6">The Captain’s health check</h2><div class="grid">
+<div class="panel dots"><h3>Temperature: still hot <span class="stamp est">ESTIMATE</span></h3><div class="meter" aria-label="Momentum meter near the hot end"><span style="width:79%"></span></div><p>A provider reading this week put his momentum score (RSI) near <b>79</b>. Above 70 counts as “hot”. The Nifty has gained more than 10% so far in November.</p><p class="note">Provider snapshot, not today’s close. <a href="#s9">[9]</a> <a href="#s10">[10]</a></p></div>
+<div class="panel dots"><h3>Nerves: calmer <span class="stamp fact">FACT</span></h3><div class="big">17</div><p>The fear gauge (India VIX) ended near <b>17</b>, down about 5%. Traders expected smaller swings ahead, at least until the inflation number landed.</p><p class="note">Provisional close. <a href="#s11">[11]</a></p></div>
+<div class="panel"><span class="shout">Verdict!</span><p>A fit runner taking short steps. The legs are strong, but a hot inflation number is the kind of stone that trips a tired sprinter. <span class="stamp opi">OPINION</span></p></div>
+</div></section>
+
+<section class="page" aria-labelledby="d7"><h2 class="page-title" id="d7">The money trail</h2><div class="grid">
+<div class="panel"><h3>Foreigners buy, Indian funds sell <span class="stamp fact">FACT</span></h3><p>In the first eight sessions of November, foreign investors bought about <b>₹65,735 crore</b> of Indian shares, while domestic funds sold about <b>₹40,504 crore</b>. On Wednesday alone foreigners bought <b>₹12,563 crore</b>. Thursday’s figures were not yet available at the cutoff. <a href="#s9">[9]</a> <a href="#s12">[12]</a></p></div>
+<div class="panel"><h3>Oil eased, rupee slipped <span class="stamp fact">FACT</span></h3><p>Brent crude fell more than 1% to about <b>$92 a barrel</b>. The rupee gave back some of Wednesday’s strength and closed near <b>94</b> per dollar. <a href="#s2">[2]</a></p></div>
+</div></section>
+
+<section class="page" aria-labelledby="d8"><h2 class="page-title" id="d8">How did this morning’s call do?</h2><div class="panel" style="background:#eaf6ff"><h3>Held ✅ <span class="stamp fact">FACT</span></h3><p>This morning we said the Captain would stay between <b>25,095</b> and <b>25,424</b> and end near <b>25,258</b>, and that we were wrong if he closed outside those walls. He spent the whole day between <b>25,143</b> and <b>25,385</b> and closed at <b>25,299</b>: inside the walls, about 40 points above our balance point. <a href="#s1">[1]</a></p></div></section>
+
+<section class="page" aria-labelledby="d9"><h2 class="page-title" id="d9">Prof. Earnings’ word of the day</h2><div class="panel word"><div class="w" style="font-size:clamp(34px,11vw,72px);overflow-wrap:anywhere">OVERBOUGHT</div><p>A market is called “overbought” when prices have risen so far, so fast, that the momentum score (RSI) is above 70. It doesn’t mean prices must fall. It means the easy part of the climb is probably done, and even small bad news can cause a stumble. Today the Captain is overbought, and a hot inflation number is exactly that kind of news.</p></div></section>
+
+<section class="page" aria-labelledby="d10"><h2 class="page-title" id="d10">Friday’s map</h2><div class="grid"><div class="tower"><div class="floor r"><span class="lvl">25,518</span><span><b>Second ceiling</b><small>Calculated resistance (R2)</small></span></div><div class="floor r"><span class="lvl">25,408</span><span><b>First ceiling</b><small>Calculated resistance (R1)</small></span></div><div class="floor r"><span class="lvl">25,385</span><span><b>Thursday’s high</b><small>Observed</small></span></div><div class="floor now"><span class="lvl">25,299</span><span><b>Where he went to sleep</b><small>Thursday’s close</small></span></div><div class="floor" style="background:#fff"><span class="lvl">25,276</span><span><b>Balance point</b><small>Calculated pivot</small></span></div><div class="floor s"><span class="lvl">25,167</span><span><b>First floor</b><small>Calculated support (S1)</small></span></div><div class="floor s"><span class="lvl">25,143</span><span><b>Thursday’s low</b><small>Observed</small></span></div><div class="floor s"><span class="lvl">25,034</span><span><b>Second floor</b><small>Calculated support (S2)</small></span></div></div><div class="panel dots"><h3>How to read the map <span class="stamp est">ESTIMATE</span></h3><p>The ceilings and floors come from Thursday’s official high, low and close, using the classic pivot formula. Thursday was a narrow day, so the steps are short: the first floor and Thursday’s low sit almost on top of each other.</p><div class="bubble">He went to sleep just above the balance point. One bad pull and he’s testing the floor.</div><p class="note">Pivots from Thursday’s high, low and close. <a href="#s1">[1]</a></p></div></div></section>
+
+<section class="page" aria-labelledby="d11"><h2 class="page-title" id="d11">Our call for Friday</h2><article class="door base" style="gap:10px"><div><span class="stamp opi">OPINION</span></div><h3>A soft start, then the floor holds</h3><p style="margin:0">The Captain opens weaker as traders react to the inflation number, and tests the first floor near <b>25,167</b>. Bank buying and foreign money defend Thursday’s low of <b>25,143</b>, and he ends the day between <b>25,143</b> and <b>25,385</b>, Thursday’s low and high.</p><dl><dt>Why</dt><dd>The number was above 6% and a touch hotter than expected, so a first-hour wobble is the natural reaction. But foreign investors have been buying on almost every dip this month, and the banks that carry the Nifty were the strongest group today.</dd><dt>What pushes against it</dt><dd>If traders start pricing in a December rate rise, the banks could stop pulling, and the Captain is already overbought. A bad night on Wall Street would add weight.</dd><dt>Written before the overnight news</dt><dd>This call is made on Thursday evening. Check GIFT Nifty before 9 am: if it is far below 25,143, the morning may already be outside our walls.</dd><dt style="color:var(--red)">We are wrong if</dt><dd>The Nifty <b>closes below 25,143</b> (the floor gave way) or <b>above 25,385</b> (the market shrugged off the number).</dd></dl></article></section>
+
+<section class="chain-box" aria-label="What to read next"><span class="ic">FRIDAY</span><p><b>Next up: Friday’s edition, after the close.</b> Did the floor hold once the market saw the inflation number? <a href="https://srinipresents.com/nifty/">srinipresents.com/nifty</a></p></section><section class="page" aria-labelledby="d12"><h2 class="page-title" id="d12">The fine print</h2><div class="closing"><div class="fine"><p>Data to 5:30 pm IST, Thursday 12 Nov 2026. Figures are rounded to whole numbers for easy reading. India VIX is a provisional close. Thursday’s provisional FII/DII cash flows were not yet available at the cutoff. The momentum reading is a provider snapshot from this week, not a closing value. Brent and rupee figures are late-session reports, not official settlements. Reports differ on ONGC’s exact fall, so no percentage is given. The cover is an original drawing in the series style.</p><ol><li id="s1"><a href="https://www.angelone.in/news/market-updates/top-gainers-and-losers-on-november-12-2026-hdfc-life-and-shriram-finance-gain-while-nestle-drops-over-2">Angel One · open, high, low, close and Nifty breadth, 12 Nov</a></li><li id="s2"><a href="https://hdfcsky.com/news/market-close-report-today-november-12-2026-nifty-sensex-pause-the-party">HDFC Sky · market close: sectors, movers, breadth, rupee, Brent, 12 Nov</a></li><li id="s3"><a href="https://www.freepressjournal.in/business/sensex-nifty-rise-for-third-day-five-factors-behind-the-rally-as-nifty-bank-nears-record">Free Press Journal · Bank Nifty and the banks’ rally, 12 Nov</a></li><li id="s4"><a href="https://www.business-standard.com/markets/news/stock-market-live-november-12-gift-nifty-nse-bse-sensex-today-nifty50-crude-oil-prices-q2-results-today-126111200066_1.html">Business Standard · live updates, closes, midcap and smallcap, 12 Nov</a></li><li id="s5"><a href="https://hdfcsky.com/news/bse-nse-sensex-november-12-2026-open-report-sensex-adds-330-pts-nifty-tops-25350-as-financials-lead-after-soft-start-oil-eases">HDFC Sky · opening report, 12 Nov</a></li><li id="s6"><a href="https://www.investing.com/news/economy-news/indias-october-retail-inflation-at-609-onyear-5020869">Reuters via Investing.com · October CPI and poll forecast</a></li><li id="s7"><a href="https://theprint.in/economy/retail-inflation-rises-to-two-year-high-of-6-09-pc-in-oct-breaches-rbis-upper-limit/3097042/">PTI via ThePrint · food inflation, onion prices, RBI rate rise and December meeting</a></li><li id="s8"><a href="https://srinipresents.com/nifty/issues/2026-11-11-post-market.html">Nifty Chronicles Post Market, 11 Nov · 5 Nov to 11 Nov closes and their sources</a>; <a href="https://insights.dsij.in/dsijarticledetail/closing-bell-nifty-sensex-extend-winning-streak-to-3rd-consecutive-trading-sessions-realty-stocks-surge-451-60413">DSIJ · 11 and 12 Nov closes</a></li><li id="s9"><a href="https://www.marketcalls.in/futures-and-options/nifty-momentum-fii-short-covering-no-pullback.html">Marketcalls · RSI and November FII/DII totals</a></li><li id="s10"><a href="https://upstox.com/news/market-news/stocks/market-wrap-nov-12-nifty-50-ends-at-25-229-sensex-flat-nifty-smallcap-100-outperforms-for-second-straight-session/article-203374/">Upstox · market wrap and November gains, 12 Nov</a></li><li id="s11"><a href="https://strota.in/">Strota · provisional India VIX close, 12 Nov</a></li><li id="s12"><a href="https://upstox.com/fii-dii-data/">Upstox · FII/DII provisional data, 11 Nov</a></li></ol></div><div class="disclaimer">For information and education only. Not personal financial advice, a recommendation to buy or sell, or a trading signal.</div></div></section></main></body></html>
