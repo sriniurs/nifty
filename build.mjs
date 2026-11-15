@@ -47,9 +47,10 @@ const siteBar = (backPath = '/nifty/') => `<!-- sitenav:auto --><style>
 .sp-bar a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 #09283f}
 .sp-bar .sp-brand{margin-left:auto;border:0;box-shadow:none;background:none;padding:0 2px}.sp-bar .sp-brand img{display:block;height:36px;width:auto}.sp-bar .sp-brand:hover{background:none}
 .sp-brandtile{display:inline-flex;flex-direction:column;align-items:flex-start;gap:6px;margin:0 0 12px}.sp-brandtile img{display:block;width:200px;max-width:62vw;height:auto;background:#ebeae0;border:3px solid #151515;border-radius:14px;padding:6px 10px;box-shadow:4px 4px 0 #151515}.sp-brandtile span{font:700 15px/1.2 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;letter-spacing:.02em}
+@media(max-width:420px){.sp-bar{gap:5px;padding:6px 8px}.sp-bar a{padding:7px 8px}.sp-bar .sp-brand img{height:29px}}
 @media print{.sp-bar{display:none}}
 </style>
-<nav class="sp-bar" aria-label="Site"><a href="${backPath}" id="sp-back" aria-label="Go back">&larr; Back</a><a href="/" aria-label="Home page">&#8962; Home</a><a class="sp-brand" href="/" aria-label="srini.presents home"><img src="/assets/brand/logo.png" alt="srini.presents" width="420" height="192"></a></nav>
+<nav class="sp-bar" aria-label="Site"><a href="${backPath}" id="sp-back" aria-label="Go back">&larr; Back</a><a href="/" aria-label="Home page">&#8962; Home</a><a href="/search/" aria-label="Search articles">Search</a><a class="sp-brand" href="/" aria-label="srini.presents home"><img src="/assets/brand/logo.png" alt="srini.presents" width="420" height="192"></a></nav>
 <script>(function(){var b=document.getElementById('sp-back');if(!b)return;b.addEventListener('click',function(e){var r=document.referrer;if(r&&new URL(r).origin===location.origin&&r.split('#')[0]!==location.href.split('#')[0]&&history.length>1&&!e.metaKey&&!e.ctrlKey&&!e.shiftKey&&!e.altKey){e.preventDefault();history.back();}});})();</script>
 <!-- /sitenav:auto -->`;
 // Logo on every issue cover: the yellow "srini.presents · for curious grown-ups" chip becomes the logo tile.
