@@ -40,7 +40,7 @@ const sections = [...months].map(([month, posts]) =>
 ).join('\n');
 
 // Same Back / Home bar as the main site, added to every issue page at build time.
-const siteBar = `<!-- sitenav:auto --><style>
+const siteBar = (backPath = '/nifty/') => `<!-- sitenav:auto --><style>
 .sp-bar{position:sticky;top:0;z-index:9999;display:flex;gap:8px;align-items:center;padding:8px 12px;background:rgba(255,253,244,.94);border-bottom:2px solid #09283f;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font:700 14px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .sp-bar a{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;border:2px solid #09283f;background:#fff;color:#09283f;text-decoration:none;box-shadow:2px 2px 0 #09283f}
 .sp-bar a:hover,.sp-bar a:focus-visible{background:#ffe53a}
@@ -49,8 +49,8 @@ const siteBar = `<!-- sitenav:auto --><style>
 .sp-brandtile{display:inline-flex;flex-direction:column;align-items:flex-start;gap:6px;margin:0 0 12px}.sp-brandtile img{display:block;width:200px;max-width:62vw;height:auto;background:#ebeae0;border:3px solid #151515;border-radius:14px;padding:6px 10px;box-shadow:4px 4px 0 #151515}.sp-brandtile span{font:700 15px/1.2 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;letter-spacing:.02em}
 @media print{.sp-bar{display:none}}
 </style>
-<nav class="sp-bar" aria-label="Site"><a href="/nifty/" id="sp-back" aria-label="Go back">&larr; Back</a><a href="/" aria-label="Home page">&#8962; Home</a><a class="sp-brand" href="/" aria-label="srini.presents home"><img src="/assets/brand/logo.png" alt="srini.presents" width="420" height="192"></a></nav>
-<script>(function(){var b=document.getElementById('sp-back');if(!b)return;b.addEventListener('click',function(e){var r=document.referrer;if(r&&r.indexOf(location.origin)===0&&history.length>1){e.preventDefault();history.back();}});})();</script>
+<nav class="sp-bar" aria-label="Site"><a href="${backPath}" id="sp-back" aria-label="Go back">&larr; Back</a><a href="/" aria-label="Home page">&#8962; Home</a><a class="sp-brand" href="/" aria-label="srini.presents home"><img src="/assets/brand/logo.png" alt="srini.presents" width="420" height="192"></a></nav>
+<script>(function(){var b=document.getElementById('sp-back');if(!b)return;b.addEventListener('click',function(e){var r=document.referrer;if(r&&new URL(r).origin===location.origin&&r.split('#')[0]!==location.href.split('#')[0]&&history.length>1&&!e.metaKey&&!e.ctrlKey&&!e.shiftKey&&!e.altKey){e.preventDefault();history.back();}});})();</script>
 <!-- /sitenav:auto -->`;
 // Logo on every issue cover: the yellow "srini.presents · for curious grown-ups" chip becomes the logo tile.
 const brandChip = /<span style="background:var\(--yellow\)">\s*srini\.presents\s*·\s*for curious grown-ups\s*<\/span>/i;
@@ -61,7 +61,7 @@ const addLogo = html => {
   return html.replace(/(<header class="cover[^"]*">\s*<div[^>]*>)/i, '$1' + brandTile);
 };
 const addBar = html => addLogo(html.includes('<!-- sitenav:auto -->') ? html
-  : html.replace(/<body\b[^>]*>/i, tag => tag + '\n' + siteBar + '\n'));
+  : html.replace(/<body\b[^>]*>/i, tag => tag + '\n' + siteBar() + '\n'));
 
 mkdirSync(output, { recursive: true });
 cpSync(source, output + '/' + source, { recursive: true });
@@ -77,7 +77,7 @@ writeFileSync(output + '/index.html', [
   '<meta name="viewport" content="width=device-width,initial-scale=1">',
   '<meta name="description" content="Follow Captain Nifty through illustrated stories about the Indian stock market.">',
   '<title>The Nifty Chronicles | srini.presents</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&amp;display=swap"><link rel="stylesheet" href="./style.css?v=retro-title"></head>',
-  '<body><main class="page"><nav aria-label="Site navigation"><a class="brand" href="/" aria-label="srini.presents home"><img src="/assets/brand/logo.png" alt="srini.presents" width="420" height="192" style="display:block;height:56px;width:auto;background:#ebeae0;border:3px solid #151515;border-radius:12px;padding:4px 8px;box-shadow:3px 3px 0 #151515"></a><a class="nav-link" href="#archive">Issue archive ↓</a></nav>',
+  '<body>' + siteBar('/') + '<main class="page"><nav aria-label="Site navigation"><a class="brand" href="/" aria-label="srini.presents home"><img src="/assets/brand/logo.png" alt="srini.presents" width="420" height="192" style="display:block;height:56px;width:auto;background:#ebeae0;border:3px solid #151515;border-radius:12px;padding:4px 8px;box-shadow:3px 3px 0 #151515"></a><a class="nav-link" href="#archive">Issue archive ↓</a></nav>',
   '<header class="cover"><div class="intro"><p class="kicker">An illustrated market series</p>',
   '<h1><span>The Nifty</span> <span>Chronicles</span></h1>',
   '<p class="tagline">Follow Captain Nifty through market rallies, plot twists and the trading day.</p>',
