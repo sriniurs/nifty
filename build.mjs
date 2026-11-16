@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process';
-import { cpSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 
 const source = 'issues';
 const output = '_site';
@@ -10,7 +10,7 @@ const format = (date, options) => new Intl.DateTimeFormat('en-IN', {
   timeZone: 'Asia/Kolkata', ...options,
 }).format(date);
 
-const issues = readdirSync(source, { withFileTypes: true })
+const issues = (existsSync(source) ? readdirSync(source, { withFileTypes: true }) : [])
   .filter(entry => entry.isFile() && /\.html$/i.test(entry.name))
   .map(({ name }) => {
     const path = source + '/' + name;
@@ -65,7 +65,8 @@ const addBar = html => addLogo(html.includes('<!-- sitenav:auto -->') ? html
   : html.replace(/<body\b[^>]*>/i, tag => tag + '\n' + siteBar() + '\n'));
 
 mkdirSync(output, { recursive: true });
-cpSync(source, output + '/' + source, { recursive: true });
+mkdirSync(output + '/' + source, { recursive: true });
+if (existsSync(source)) cpSync(source, output + '/' + source, { recursive: true });
 for (const entry of readdirSync(output + '/' + source, { withFileTypes: true })) {
   if (!entry.isFile() || !/\.html$/i.test(entry.name)) continue;
   const file = output + '/' + source + '/' + entry.name;

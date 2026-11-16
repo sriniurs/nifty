@@ -28,6 +28,7 @@ jobs:
       - name: Build monthly archives
         run: node build.mjs
       - name: Build the Nifty search index
+        if: ${{ hashFiles('issues/*.html') != '' }}
         run: >-
           npx --yes pagefind@1.6.0 --site _site --glob 'issues/*.html'
           --force-language en --exclude-selectors 'nav, footer, svg'
